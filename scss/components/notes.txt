@@ -1,1 +1,1 @@
-I have tried my webpages on IE. Everything works fine and some parts work better, such as my initials I have put a scaling on it but in chrome it doesn't work.
+

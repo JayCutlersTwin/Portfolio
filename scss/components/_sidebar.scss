@@ -50,7 +50,7 @@
         text-align: center;
         transform: scale(1);
         transform-origin: center;
-        transition-duration: .5s;
+        transition-duration: 0.2s;
         transition-timing-function: ease-out;
         a{
             text-decoration: none;
@@ -63,7 +63,7 @@
     li:hover {
         transform: scale(1.4);
         transform-origin: center;
-        transition-duration: .5s;
+        transition-duration: 0.2s;
         transition-timing-function: ease-in;
     }
 }
@@ -95,11 +95,16 @@
         position: absolute;
         top: 35%;
         left: 35%;
+        transform: translateY(0px);
+        transition-duration: 1s;
     }
     .hidden-icon {
         position: absolute;
         top: -20px;
         left: 18px;
+        transform: translateY(0px);
+        transition-duration: .5s;
+        transition-timing-function: ease-in-out;
     }
 }
 

@@ -117,7 +117,7 @@ span .sandwich {
   text-align: center;
   transform: scale(1);
   transform-origin: center;
-  transition-duration: 0.5s;
+  transition-duration: 0.2s;
   transition-timing-function: ease-out;
 }
 #sidebar-menu .list-compartment ul li a {
@@ -130,7 +130,7 @@ span .sandwich {
 #sidebar-menu .list-compartment ul li:hover {
   transform: scale(1.4);
   transform-origin: center;
-  transition-duration: 0.5s;
+  transition-duration: 0.2s;
   transition-timing-function: ease-in;
 }
 
@@ -160,11 +160,16 @@ span .sandwich {
   position: absolute;
   top: 35%;
   left: 35%;
+  transform: translateY(0px);
+  transition-duration: 1s;
 }
 .icon-block .hidden-icon {
   position: absolute;
   top: -20px;
   left: 18px;
+  transform: translateY(0px);
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
 }
 
 #LinkedIn:hover {
