@@ -87,26 +87,24 @@ span .sandwich {
   border-bottom: 3px solid #004953;
   padding: 20%;
 }
+.Initials a {
+  color: #004953;
+  text-decoration: none;
+}
 .Initials .JB {
   font-size: 7em;
   font-weight: 600;
   font-family: arial;
-  color: #004953;
-  text-decoration: none;
 }
 .Initials .JB span {
   vertical-align: middle;
-  transform: scale();
-  transform-origin: center;
-  transition-duration: 0.5s;
-  transition-timing-function: ease-out;
+  text-decoration: none;
+  transition: color 0.5s ease-out;
 }
-.Initials .JB:hover span {
+
+.JB span:hover {
   vertical-align: middle;
-  transform: scale(1.4);
-  transform-origin: center;
-  transition-duration: 0.5s;
-  transition-timing-function: ease-in;
+  color: #00fec8;
 }
 
 #sidebar-menu .list-compartment ul {
@@ -445,15 +443,21 @@ span .sandwich {
   color: #000000;
 }
 
+.AboutMe-container {
+  padding: 0px 20px;
+}
+
 .hex-container {
-  align-self: center;
   margin-bottom: 30px;
+  position: relative;
+  margin-left: 33%;
+  height: 100px;
 }
 
 .hex-images {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   padding-top: 50px;
   width: 100%;
   height: auto;
@@ -463,7 +467,7 @@ span .sandwich {
   width: 100px;
   height: 57.735px;
   background: #004953;
-  position: relative;
+  position: absolute;
   margin-bottom: 40px;
 }
 .hex img {
@@ -498,6 +502,62 @@ span .sandwich {
   border-top: 28.8675px solid #004953;
 }
 
+.hex-hidden {
+  width: 100px;
+  height: 57.735px;
+  background: #00fec8;
+  position: absolute;
+  display: none;
+  margin-bottom: 40px;
+}
+.hex-hidden img {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 20%;
+  left: 30%;
+}
+
+.hex-hidden::before {
+  content: "";
+  position: absolute;
+  top: -28.8675px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 28.8675px solid #00fec8;
+}
+
+.hex-hidden::after {
+  content: "";
+  position: absolute;
+  bottom: -28.8675px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 28.8675px solid #00fec8;
+}
+
+.hex-container:hover .hex-hidden {
+  width: 100px;
+  height: 57.735px;
+  background: #00fec8;
+  position: absolute;
+  display: block;
+  margin-bottom: 40px;
+}
+.hex-container:hover .hex-hidden img {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 20%;
+  left: 30%;
+}
+
 .qualifications h3 {
   text-align: center;
 }
@@ -507,8 +567,8 @@ span .sandwich {
 }
 .qualifications .qual-lists ul {
   list-style: none;
-  margin-left: 10px;
-  padding-left: 0px;
+  margin-left: 0px;
+  padding: 0px 20px;
 }
 .qualifications .qual-lists ul li {
   margin-bottom: 5px;
@@ -538,7 +598,6 @@ span .sandwich {
 .tech-lists {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   align-items: center;
 }
 
@@ -546,10 +605,15 @@ span .sandwich {
   .hex-images {
     flex-direction: row;
   }
+
+  #hex-1 {
+    margin-left: -90px;
+  }
 }
-@media (min-width: 576px) {
+@media (min-width: 350px) {
   .tech-lists,
 .qualifications .qual-lists {
+    justify-content: space-around;
     flex-direction: row;
   }
 }

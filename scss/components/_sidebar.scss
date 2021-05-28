@@ -14,28 +14,28 @@
     text-align: center;
     border-bottom: 3px solid $Primary-Color;
     padding: 20%;
+    a {
+        color: $Primary-Color;
+        text-decoration: none;
+    }
     .JB {
         font-size: 7em;
         font-weight: $fontweightbold;
         font-family: $font;
-        color: $Primary-Color;
-        text-decoration: none;
         span {
             vertical-align: middle;
-            transform: scale();
-            transform-origin: center;
-            transition-duration: .5s;
-            transition-timing-function: ease-out;
+            text-decoration: none;
+            transition: color .5s ease-out;
         }
     }
-    .JB:hover span {
-        vertical-align: middle;
-        transform: scale(1.4);
-        transform-origin: center;
-        transition-duration: .5s;
-        transition-timing-function: ease-in;
-    }
+
 }
+
+.JB span:hover {
+    vertical-align: middle;
+    color: $NeonGreen;
+}
+
 
 
 
