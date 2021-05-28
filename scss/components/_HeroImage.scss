@@ -1,0 +1,100 @@
+@use "../abstracts" as *;
+
+.background {
+    display: block;
+}
+#banner-section {
+    top: 0%;
+}
+
+.image-con-hero {
+    position: relative;
+}
+
+#hero-image {
+    width: 100%;
+    height: 30vh;
+}
+
+.background-heading {
+    display: block;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    top: 40%;
+    left: 0%;
+    color: $White;
+    h1 {
+        font-weight: $fontweightbold;
+        margin: 0px;
+        font-size: $H1FontSizeSmallestDevice;
+    }
+    h3 {
+        margin-top: 0px;
+        font-weight: $fontweightskinny;
+        font-size: $H3FontSizeSmallestDevice;
+    }
+}
+
+.scroll-down {
+    display: block;
+    text-align: center;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    a h3 {
+        margin-bottom: 0px;
+        color: $White;
+        text-decoration: none;
+        font-weight: $fontweightskinny;
+        font-size: $FontSizeSmallestDevice;
+    }
+    a .down-arrow {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
+@media (min-width: 576px) {
+    #hero-image {
+        width: 100%;
+        height: 50vh;
+    }
+    .background-heading {
+        h1 {
+            font-size: $H1FontSizeSmallDevice;
+        }
+        h3 {
+            font-size: $H3FontSizeSmallDevice;
+        }
+    }
+}
+
+@media (min-width:768px) {
+    .background-heading {
+        h1 {
+            font-size: $H1FontSizeMediumDevice;
+        }
+        h3 {
+            font-size: $H3FontSizeMediumDevice;
+        }
+    }
+}
+
+@media (min-width:1200px) {
+    #hero-image {
+        width: 100%;
+        height: 100vh;
+    }
+    .background-heading {
+        h1 {
+            font-size: $H1FontSizeLargeDevice;
+        }
+        h3 {
+            font-weight: $fontweightskinny;
+            font-size: $H3FontSizeLargeDevice;
+        }
+    }
+}

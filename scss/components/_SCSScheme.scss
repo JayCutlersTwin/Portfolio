@@ -1,0 +1,37 @@
+@use "abstracts" as *;
+
+
+.SCSScheme-container {
+    width: 95%;
+    .link-TT {
+        width:95%;
+        letter-spacing: 0;
+    }
+    p {
+        letter-spacing: 0.1rem;
+        font-size: $FontSizeSmallestDevice;
+    }
+    .container-title {
+        font-size: $H1FontSizeSmallestDevice;
+    }
+    h3 {
+        margin-bottom: 0px;
+    }
+}
+
+@media (min-width:576px) {
+    .SCSScheme-container {
+    }
+}
+
+
+@media (min-width:768px) {
+    .container-title {
+        text-align: center;
+    }
+    .SCSScheme-container {
+        p {
+            font-size: $FontSizeSmallDevice;
+        }
+    }
+}

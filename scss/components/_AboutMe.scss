@@ -1,0 +1,123 @@
+@use "../abstracts" as *;
+// Hex Section
+.hex-container {
+    align-self: center;
+    margin-bottom: 30px;
+}
+
+.hex-images {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 50px;
+    width: 100%;
+    height: auto;
+}
+
+// .hex img{
+//     width: 33%;
+//     overflow: hidden;
+// }
+
+
+.hex {
+    width: 100px;
+    height: 57.735px;
+    background: $Primary-Color;
+    position: relative;
+    margin-bottom: 40px;
+    img {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 20%;
+        left: 30%;
+    }
+}
+.hex::before {
+  content: "";
+  position: absolute;
+  top: -28.8675px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 28.8675px solid $Primary-Color;
+}
+.hex::after {
+  content: "";
+  position: absolute;
+  bottom: -28.8675px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 28.8675px solid $Primary-Color;
+}
+
+// Qualifications/Language
+
+.qualifications {
+    h3 {
+        text-align: center;
+    }
+    .qual-lists {
+        display: flex;
+        flex-direction: column;
+        ul {
+            list-style: none;
+            margin-left: 10px;
+            padding-left: 0px;
+            li {
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
+
+.technical-skills {
+    h3 {
+        text-align: center;
+    }
+    .programming-languages,
+    .frameworks {
+        padding: 0px 20px 20px;
+        h4 {
+            text-align: center;
+        }
+        ul {
+            list-style: none;
+            padding-left: 0px;
+            li {
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+}
+
+.tech-lists {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+
+// Media
+@media (min-width:350px) {
+    .hex-images {
+        flex-direction: row;
+    }
+}
+
+@media (min-width:576px) {
+    .tech-lists,
+    .qualifications .qual-lists {
+        flex-direction: row;
+    }
+}

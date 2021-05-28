@@ -1,0 +1,47 @@
+@use "../abstracts" as *;
+
+.hamburger{
+    position: absolute;
+    top: 2%;
+    left: 5%;
+    z-index: 1;
+}
+
+.hamburger button{
+    width: 50px;
+    height: 50px;
+    background-color: $White;
+    border-radius: 3px;
+    border: none;
+
+    .sandwich-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        span {
+            display: block;
+            margin-bottom: 5px;
+            width: 23px;
+            height: 3px;
+            background-color: $Primary-Color;
+        }
+    }
+}
+.hamburger button:hover {
+    background-color: $LightSteelBlue;
+}
+
+span .sandwich {
+    width: 23px;
+    height: 3px;
+    background-color: $White;
+}
+
+//Media
+
+@media (min-width: 768px) {
+    .hamburger {
+        display: none;
+    }
+}

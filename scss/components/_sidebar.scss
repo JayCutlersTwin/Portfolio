@@ -1,0 +1,147 @@
+@use '../abstracts' as *;
+
+#sidebar-menu {
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    border-right: 3px solid $Primary-Color;
+}
+
+//Initials
+
+.Initials {
+    display: block;
+    text-align: center;
+    border-bottom: 3px solid $Primary-Color;
+    padding: 20%;
+    .JB {
+        font-size: 7em;
+        font-weight: $fontweightbold;
+        font-family: $font;
+        color: $Primary-Color;
+        text-decoration: none;
+        span {
+            vertical-align: middle;
+            transform: scale();
+            transform-origin: center;
+            transition-duration: .5s;
+            transition-timing-function: ease-out;
+        }
+    }
+    .JB:hover span {
+        vertical-align: middle;
+        transform: scale(1.4);
+        transform-origin: center;
+        transition-duration: .5s;
+        transition-timing-function: ease-in;
+    }
+}
+
+
+
+//List
+
+#sidebar-menu .list-compartment ul{
+    padding-right: 40px;
+    li {
+        list-style-type: none;
+        margin-bottom: 40px;
+        margin-top: 40px;
+        text-align: center;
+        transform: scale(1);
+        transform-origin: center;
+        transition-duration: .5s;
+        transition-timing-function: ease-out;
+        a{
+            text-decoration: none;
+            color: $MainTextColor;
+        }
+        a:hover{
+            text-decoration: none;
+        }
+    }
+    li:hover {
+        transform: scale(1.4);
+        transform-origin: center;
+        transition-duration: .5s;
+        transition-timing-function: ease-in;
+    }
+}
+
+
+//Socials
+.social-media {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.icon-block-container {
+    position: relative;
+    display: block;
+    height: 50px;
+    width: 50px;
+}
+
+.icon-block {
+    display: block;
+    position: relative;
+    height: 50px;
+    width: 50px;
+    background-color: $Primary-Color;
+    text-align: center;
+    overflow: hidden;
+    .showing-icon{
+        position: absolute;
+        top: 35%;
+        left: 35%;
+    }
+    .hidden-icon {
+        position: absolute;
+        top: -20px;
+        left: 18px;
+    }
+}
+
+#LinkedIn:hover {
+    background-color: $LinkedInBlue;
+    transition-duration: 1s;
+    .hidden-icon {
+        transform: translateY(38px);
+        transition-duration: 1s;
+        transition-timing-function: ease-in-out;
+    }
+    .showing-icon {
+        transform: translateY(100px);
+        transition-duration: .5s;
+    }
+}
+
+#Github:hover {
+    background-color: $GithubGray;
+    transition-duration: 1s;
+    .hidden-icon {
+        transform: translateY(38px);
+        transition-duration: 1s;
+        transition-timing-function: ease-in-out;
+    }
+    .showing-icon {
+        transform: translateY(100px);
+        transition-duration: .5s;
+    }
+}
+
+
+//Media
+
+@media (max-width:767px) {
+    #sidebar-menu {
+        display: none;
+    }
+}
+
+@media (min-width:992px) {
+    #sidebar-menu {
+        width: 300px;
+    }
+}
