@@ -105,6 +105,9 @@
     }
 }
 
-@media (min-width:1260px) {
-
+@media (min-width:1200px) {
+    #first-block,
+    #fourth-block {
+        margin-left: 20px;
+    }
 }

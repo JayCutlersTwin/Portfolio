@@ -22,7 +22,9 @@
         font-size: 7em;
         font-weight: $fontweightbold;
         font-family: $font;
+        text-decoration: none;
         span {
+            color: $Primary-Color;
             vertical-align: middle;
             text-decoration: none;
             transition: color .5s ease-out;
@@ -91,6 +93,7 @@
     background-color: $Primary-Color;
     text-align: center;
     overflow: hidden;
+    transition: background-color 1s ease-in-out;
     .showing-icon{
         position: absolute;
         top: 35%;

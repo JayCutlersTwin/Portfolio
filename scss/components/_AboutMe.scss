@@ -73,6 +73,10 @@
         top: 20%;
         left: 30%;
     }
+    .hex-hidden-name {
+        color: $Primary-Color;
+        text-align: center;
+    }
 }
 .hex-hidden::before {
     content: "";
@@ -130,6 +134,7 @@
             list-style: none;
             margin-left: 0px;
             padding: 0px 20px;
+            text-align: center;
             li {
                 margin-bottom: 5px;
             }

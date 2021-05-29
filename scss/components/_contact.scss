@@ -17,7 +17,6 @@
         background-color: $LightSteelBlue;
         height: 30px;
         padding: 10px 10px;
-
     }
     button {
         height: 40px;
@@ -28,7 +27,6 @@
         background-color: $White;
         border: 2px solid $Primary-Color;
         border-radius: 3px;
-
     }
 }
 
@@ -36,10 +34,7 @@
     resize: both;
 }
 
-.form-name {
-    width:46%;
-    margin-bottom: 20px;
-}
+
 
 .scroll-up {
     text-align: center;
@@ -55,4 +50,10 @@
         margin-top: 0px;
         color: $Black;
     }
+}
+
+#first-name,
+#second-name {
+    width:46%;
+    margin-bottom: 20px;
 }

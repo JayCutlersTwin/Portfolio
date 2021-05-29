@@ -17,6 +17,13 @@
     h3 {
         margin-bottom: 0px;
     }
+    a{
+        color: $Primary-Color;
+        font-weight: $fontweightbold;
+    }
+    a:hover {
+        color: $NeonGreen;
+    }
 }
 
 @media (min-width:576px) {
