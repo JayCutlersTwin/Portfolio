@@ -100,7 +100,7 @@
         text-align: center;
     }
     .block-con {
-        width: 32%;
+        width: 49.5%;
         display:inline-block;
     }
 }
@@ -109,5 +109,9 @@
     #first-block,
     #fourth-block {
         margin-left: 20px;
+    }
+    .block-con {
+        width: 32%;
+        display:inline-block;
     }
 }

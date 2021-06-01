@@ -392,7 +392,7 @@ span .sandwich {
   }
 
   .block-con {
-    width: 32%;
+    width: 49.5%;
     display: inline-block;
   }
 }
@@ -400,6 +400,11 @@ span .sandwich {
   #first-block,
 #fourth-block {
     margin-left: 20px;
+  }
+
+  .block-con {
+    width: 32%;
+    display: inline-block;
   }
 }
 .contact-description {
