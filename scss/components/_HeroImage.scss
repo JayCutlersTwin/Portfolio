@@ -9,11 +9,11 @@
 
 .image-con-hero {
     position: relative;
+    overflow:hidden;
 }
 
 #hero-image {
-    width: 100%;
-    height: 30vh;
+    height: 100vh;
 }
 
 .background-heading {
@@ -58,10 +58,6 @@
 }
 
 @media (min-width: 576px) {
-    #hero-image {
-        width: 100%;
-        height: 50vh;
-    }
     .background-heading {
         h1 {
             font-size: $H1FontSizeSmallDevice;
@@ -84,10 +80,6 @@
 }
 
 @media (min-width:1200px) {
-    #hero-image {
-        width: 100%;
-        height: 100vh;
-    }
     .background-heading {
         h1 {
             font-size: $H1FontSizeLargeDevice;
@@ -96,5 +88,11 @@
             font-weight: $fontweightskinny;
             font-size: $H3FontSizeLargeDevice;
         }
+    }
+}
+
+@media (min-width:1577px) {
+    #hero-image {
+        width:100%;
     }
 }

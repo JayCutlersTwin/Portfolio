@@ -10,6 +10,13 @@ body {
     color: $Black;
 }
 
+.preload * {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+}
+
 a {
     text-decoration: none;
 }

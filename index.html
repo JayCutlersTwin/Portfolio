@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
-        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="css/styles.css">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width initial-size=1">
         <title>James Binding</title>
     </head>
 
-    <body>
+    <body class="preload">
+        <script type="text/javascript">document.body.classList.remove('preload')</script>
+
 <!-- Menu Button -->
         <div class="hamburger">
             <button type="button" name="button">
@@ -22,7 +24,7 @@
         <div id="sidebar-menu">
 
                 <div class="Initials">
-                    <a href="Index.html" class"initial-anchor">
+                    <a href="index.html" class"initial-anchor">
                         <div class="JB">
                             <span> JB </span>
                         </div>
@@ -32,10 +34,10 @@
 
             <div class="list-compartment">
                 <ul>
-                    <li><a href="AboutMe.html">About Me</a></li>
-                    <li><a href="Portfolio.html">My Portfolio</a></li>
-                    <li><a href="CodingExamples.html">Coding Examples</a></li>
-                    <li><a href="SCSScheme.html">SCS Scheme</a></li>
+                    <li><a href="html/AboutMe.html">About Me</a></li>
+                    <li><a href="#blocks">My Portfolio</a></li>
+                    <li><a href="html/CodingExamples.html">Coding Examples</a></li>
+                    <li><a href="html/SCSScheme.html">SCS Scheme</a></li>
                     <li><a href="#contact">Contact Me</a></li>
                 </ul>
 
@@ -43,16 +45,16 @@
                     <div class="icon-block-container">
                         <a href="https://www.linkedin.com/in/james-binding-123abc">
                             <span class="icon-block" id="LinkedIn">
-                                <img class="hidden-icon" src="../icons/linkedin.svg" alt="LinkedIn">
-                                <img class="showing-icon" src="../icons/linkedin.svg" alt="LinkedIn">
+                                <img class="hidden-icon" src="icons/linkedin.svg" alt="LinkedIn">
+                                <img class="showing-icon" src="icons/linkedin.svg" alt="LinkedIn">
                             </span>
                         </a>
                     </div>
                     <div class="icon-block-container">
                         <a href="https://github.com/JayCutlersTwin">
                             <span class="icon-block" id="Github">
-                                <img class="hidden-icon" src="../icons/github.svg" alt="Github">
-                                <img class="showing-icon" src="../icons/github.svg" alt="Github">
+                                <img class="hidden-icon" src="icons/github.svg" alt="Github">
+                                <img class="showing-icon" src="icons/github.svg" alt="Github">
                             </span>
                         </a>
                     </div>
@@ -64,7 +66,7 @@
         <section id="banner-section">
             <div class="background">
                 <div class="image-con-hero">
-                    <img id="hero-image" src="../images/abstractHeroPicture.jpg" alt="Hero Image">
+                    <img id="hero-image" src="images/abstractHeroPicture.jpg" alt="Hero Image">
                     <div class="background-heading">
                             <h1>My Name Is James Binding</h1>
                             <h3>I'm a Web Developer</h3>
@@ -73,7 +75,7 @@
                         <a href="#contact">
                             <h3> scroll down </h3>
                             <span class="down-arrow">
-                                <img src="../icons/arrow-down.svg" alt="down arrow">
+                                <img src="icons/arrow-down.svg" alt="down arrow">
                             </span>
                         </a>
                     </div>
@@ -89,7 +91,7 @@
                     <div class="block-con" id="first-block">
                         <a href="#">
                             <div class="image-con">
-                                <img class="project-images" src="../images/netmatters.JPG" alt="Project One Image">
+                                <img class="project-images" src="images/netmatters.jpg" alt="Project One Image">
                                 <span class="gradient"></span>
                                 <h3 class="project-heading">Netmatters Replica</h3>
                             </div>
@@ -98,7 +100,7 @@
                                 <h3>Project One</h3>
                                 <div class="block-heading-and-arrow">
                                     <h6>View Project </h6>
-                                    <span><img src="../icons/arrow-right.svg" alt=" Right arrow"></span>
+                                    <span><img src="icons/arrow-right.svg" alt=" Right arrow"></span>
                                 </div>
                             </div>
                         </a>
@@ -107,7 +109,7 @@
                     <div class="block-con">
                         <a href="#">
                             <div class="image-con">
-                                <img class="project-images" src="../images/Placeholder.JPG" alt="Project One Image">
+                                <img class="project-images" src="images/Placeholder.jpg" alt="Project One Image">
                                 <span class="gradient"></span>
                                 <h3 class="project-heading">Coming Soon...</h3>
                             </div>
@@ -115,7 +117,7 @@
                                 <h3>Project Two</h3>
                                 <div class="block-heading-and-arrow">
                                     <h6>View Project </h6>
-                                    <span><img src="../icons/arrow-right.svg" alt=" Right arrow"></span>
+                                    <span><img src="icons/arrow-right.svg" alt=" Right arrow"></span>
                                 </div>
                             </div>
                         </a>
@@ -124,7 +126,7 @@
                     <div class="block-con">
                         <a href="#">
                             <div class="image-con">
-                                <img class="project-images" src="../images/Placeholder.JPG" alt="Project One Image">
+                                <img class="project-images" src="images/Placeholder.jpg" alt="Project One Image">
                                 <span class="gradient"></span>
                                 <h3 class="project-heading">Coming Soon...</h3>
                             </div>
@@ -132,7 +134,7 @@
                                 <h3>Project Three</h3>
                                 <div class="block-heading-and-arrow">
                                     <h6>View Project </h6>
-                                    <span><img src="../icons/arrow-right.svg" alt=" Right arrow"></span>
+                                    <span><img src="icons/arrow-right.svg" alt=" Right arrow"></span>
                                 </div>
                             </div>
                         </a>
@@ -141,7 +143,7 @@
                     <div class="block-con" id="fourth-block">
                         <a href="#">
                             <div class="image-con">
-                                <img class="project-images" src="../images/Placeholder.JPG" alt="Project One Image">
+                                <img class="project-images" src="images/Placeholder.jpg" alt="Project One Image">
                                 <span class="gradient"></span>
                                 <h3 class="project-heading">Coming Soon...</h3>
                             </div>
@@ -149,7 +151,7 @@
                                 <h3>Project Four</h3>
                                 <div class="block-heading-and-arrow">
                                     <h6>View Project </h6>
-                                    <span><img src="../icons/arrow-right.svg" alt=" Right arrow"></span>
+                                    <span><img src="icons/arrow-right.svg" alt=" Right arrow"></span>
                                 </div>
                             </div>
                         </a>
@@ -158,7 +160,7 @@
                     <div class="block-con">
                         <a href="#">
                             <div class="image-con">
-                                <img class="project-images" src="../images/Placeholder.JPG" alt="Project One Image">
+                                <img class="project-images" src="images/Placeholder.jpg" alt="Project One Image">
                                 <span class="gradient"></span>
                                 <h3 class="project-heading">Coming Soon...</h3>
                             </div>
@@ -166,7 +168,7 @@
                                 <h3>Project Five</h3>
                                 <div class="block-heading-and-arrow">
                                     <h6>View Project </h6>
-                                    <span><img src="../icons/arrow-right.svg" alt=" Right arrow"></span>
+                                    <span><img src="icons/arrow-right.svg" alt=" Right arrow"></span>
                                 </div>
                             </div>
                         </a>
@@ -175,7 +177,7 @@
                     <div class="block-con">
                         <a href="#">
                             <div class="image-con">
-                                <img class="project-images" src="../images/Placeholder.JPG" alt="Project One Image">
+                                <img class="project-images" src="images/Placeholder.jpg" alt="Project One Image">
                                 <span class="gradient"></span>
                                 <h3 class="project-heading">Coming Soon...</h3>
                             </div>
@@ -183,7 +185,7 @@
                                 <h3>Project Six</h3>
                                 <div class="block-heading-and-arrow">
                                     <h6>View Project </h6>
-                                    <span><img src="../icons/arrow-right.svg" alt=" Right arrow"></span>
+                                    <span><img src="icons/arrow-right.svg" alt=" Right arrow"></span>
                                 </div>
                             </div>
                         </a>
@@ -219,7 +221,7 @@
             <div class="scroll-up">
                 <a href="#">
                     <span class="up-arrow">
-                        <img src="../icons/arrow-up.svg" alt="up arrow">
+                        <img src="icons/arrow-up.svg" alt="up arrow">
                     </span>
                     <h3> Scroll up </h3>
                 </a>

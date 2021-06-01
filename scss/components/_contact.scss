@@ -7,7 +7,7 @@
 }
 
 .contact-us {
-    margin-right: 5%;
+    margin-right: 0;
     input {
         font-size: 1em;
         width: 100%;
@@ -54,6 +54,26 @@
 
 #first-name,
 #second-name {
-    width:46%;
+    width:100%;
     margin-bottom: 20px;
+}
+.form-inputs {
+    margin-right: 20px;
+}
+
+@media (min-width:567px) {
+    #first-name,
+    #second-name {
+        width:40%;
+    }
+}
+
+@media (min-width:1200px) {
+    .form-inputs {
+        margin-left: 20px;
+        margin-right: 40px;
+    }
+    .contact-description {
+        margin-left: 20px;
+    }
 }

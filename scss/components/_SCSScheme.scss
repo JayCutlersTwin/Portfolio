@@ -2,7 +2,6 @@
 
 
 .SCSScheme-container {
-    width: 95%;
     .link-TT {
         width:95%;
         letter-spacing: 0;
@@ -40,5 +39,12 @@
         p {
             font-size: $FontSizeSmallDevice;
         }
+    }
+}
+
+
+@media (min-width:1200px) {
+    .SCSScheme-container {
+        padding: 0px 20px;
     }
 }

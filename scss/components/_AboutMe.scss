@@ -3,7 +3,7 @@
 
 // ABoutMe Section
 .AboutMe-container {
-    padding: 0px 20px;
+    padding: 0px 0px;
 }
 // Hex Section
 .hex-container {
@@ -25,7 +25,7 @@
 
 .hex {
     width: 100px;
-    height: 57.735px;
+    height: 57px;
     background: $Primary-Color;
     position: absolute;
     margin-bottom: 40px;
@@ -40,28 +40,28 @@
 .hex::before {
     content: "";
     position: absolute;
-    top: -28.8675px;
+    top: -28px;
     left: 0;
     width: 0;
     height: 0;
     border-left: 50px solid transparent;
     border-right: 50px solid transparent;
-    border-bottom: 28.8675px solid $Primary-Color;
+    border-bottom: 28px solid $Primary-Color;
 }
 .hex::after {
     content: "";
     position: absolute;
-    bottom: -28.8675px;
+    bottom: -28px;
     left: 0;
     width: 0;
     height: 0;
     border-left: 50px solid transparent;
     border-right: 50px solid transparent;
-    border-top: 28.8675px solid $Primary-Color;
+    border-top: 28px solid $Primary-Color;
 }
 .hex-hidden{
     width: 100px;
-    height: 57.735px;
+    height: 57px;
     background: $NeonGreen;
     position: absolute;
     display: none;
@@ -81,30 +81,36 @@
 .hex-hidden::before {
     content: "";
     position: absolute;
-    top: -28.8675px;
+    top: -28px;
     left: 0;
     width: 0;
     height: 0;
     border-left: 50px solid transparent;
     border-right: 50px solid transparent;
-    border-bottom: 28.8675px solid $NeonGreen;
+    border-bottom: 28px solid $NeonGreen;
 }
 .hex-hidden::after {
     content: "";
     position: absolute;
-    bottom: -28.8675px;
+    bottom: -28px;
     left: 0;
     width: 0;
     height: 0;
     border-left: 50px solid transparent;
     border-right: 50px solid transparent;
-    border-top: 28.8675px solid $NeonGreen;
+    border-top: 28px solid $NeonGreen;
 }
 
 .hex-container:hover {
+    .hex::after {
+        border-top: 27.8675px solid $White;
+    }
+    .hex::before {
+        border-bottom: 27.8675px solid $White;
+    }
     .hex-hidden{
         width: 100px;
-        height: 57.735px;
+        height: 57px;
         background: $NeonGreen;
         position: absolute;
         display: block;
@@ -193,5 +199,11 @@
     .qualifications .qual-lists {
         justify-content: space-around;
         flex-direction: row;
+    }
+}
+
+@media (min-width:1200px) {
+    .AboutMe-container {
+        padding: 0px 20px;
     }
 }

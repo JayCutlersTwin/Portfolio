@@ -88,6 +88,7 @@
 .icon-block {
     display: block;
     position: relative;
+    border-radius: 30px;
     height: 50px;
     width: 50px;
     background-color: $Primary-Color;
@@ -96,15 +97,15 @@
     transition: background-color 1s ease-in-out;
     .showing-icon{
         position: absolute;
-        top: 35%;
-        left: 35%;
+        top: 17px;
+        left: 17px;
         transform: translateY(0px);
         transition-duration: 1s;
     }
     .hidden-icon {
         position: absolute;
-        top: -20px;
-        left: 18px;
+        top: -21px;
+        left: 17px;
         transform: translateY(0px);
         transition-duration: .5s;
         transition-timing-function: ease-in-out;
