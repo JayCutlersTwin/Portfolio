@@ -29,11 +29,13 @@
         font-weight: $fontweightbold;
         margin: 0px;
         font-size: $H1FontSizeSmallestDevice;
+        text-shadow: 7px 7px 10px $Black;
     }
     h3 {
         margin-top: 0px;
         font-weight: $fontweightskinny;
         font-size: $H3FontSizeSmallestDevice;
+        text-shadow: 7px 7px 10px $Black;
     }
 }
 
@@ -44,14 +46,17 @@
     bottom: 0%;
     left: 0%;
     width: 100%;
-    a h3 {
-        margin-bottom: 0px;
-        color: $White;
-        text-decoration: none;
-        font-weight: $fontweightskinny;
-        font-size: $FontSizeSmallestDevice;
+    h3 {
+        margin-bottom: 10px;
+        a {
+            margin-bottom: 0px;
+            color: $White;
+            text-decoration: none;
+            font-weight: $fontweightnormal;
+            font-size: $FontSizeLargeDevice;
+        }
     }
-    a .down-arrow {
+    .down-arrow {
         display: block;
         margin-bottom: 10px;
     }

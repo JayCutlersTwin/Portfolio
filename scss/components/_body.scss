@@ -8,6 +8,7 @@ body {
     font-size: $RootFontSize;
     background-color: $Secondary-Color;
     color: $Black;
+    overflow-x: hidden;
 }
 
 .preload * {
@@ -31,16 +32,14 @@ a {
 }
 
 @media (min-width:768px) {
-    section {
+    .body-container {
         margin-left: 203px;
     }
 }
 
 
 @media (min-width:992px) {
-    section {
-        margin-left: 303px;
-    }
+
 }
 
 @media (min-width:1260px) {

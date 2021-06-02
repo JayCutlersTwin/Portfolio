@@ -4,7 +4,10 @@
 // ABoutMe Section
 .AboutMe-container {
     padding: 0px 0px;
+    display: block;
+    max-width: 100%;
 }
+
 // Hex Section
 .hex-container {
     margin-bottom: 30px;
@@ -199,6 +202,16 @@
     .qualifications .qual-lists {
         justify-content: space-around;
         flex-direction: row;
+    }
+}
+
+@media (min-width:992px) {
+    .AboutMe-container{
+        display: flex;
+        justify-content: space-between;
+        .half-width-container {
+            max-width: 50%;
+        }
     }
 }
 

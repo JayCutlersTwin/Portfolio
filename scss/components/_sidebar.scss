@@ -13,7 +13,7 @@
     display: block;
     text-align: center;
     border-bottom: 3px solid $Primary-Color;
-    padding: 20%;
+    padding: 10%;
     a {
         color: $Primary-Color;
         text-decoration: none;
@@ -146,11 +146,5 @@
 @media (max-width:767px) {
     #sidebar-menu {
         display: none;
-    }
-}
-
-@media (min-width:992px) {
-    #sidebar-menu {
-        width: 300px;
     }
 }

@@ -2,12 +2,14 @@
 
 
 .SCSScheme-container {
+    text-align: center;
     .link-TT {
         width:95%;
         letter-spacing: 0;
     }
     p {
         letter-spacing: 0.1rem;
+        line-height: 25px;
         font-size: $FontSizeSmallestDevice;
     }
     .container-title {
@@ -24,6 +26,27 @@
         color: $NeonGreen;
     }
 }
+
+.treehouselogo-container {
+    display: block;
+    max-width:100%;
+}
+
+.treehouse-show:hover svg path{
+    display: block;
+    fill: $TreeHouseGreen;
+}
+
+.small-container {
+    background-color: $Primary-Color;
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+    color: $White;
+    margin-top: 20px;
+    box-shadow: 1px 1px 10px $Black;
+}
+
 
 @media (min-width:576px) {
     .SCSScheme-container {
@@ -42,6 +65,24 @@
     }
 }
 
+@media (min-width:992px) {
+    .SCSScheme-container h3 {
+        text-align: center;
+    }
+    .bigger-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .small-container {
+        display: inline-block;
+        max-width:27%;
+        margin-top: 0px;
+    }
+    .treehouselogo-container {
+        text-align: center;
+    }
+}
 
 @media (min-width:1200px) {
     .SCSScheme-container {
