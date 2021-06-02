@@ -211,6 +211,10 @@
         justify-content: space-between;
         .half-width-container {
             max-width: 50%;
+            padding: 0px 20px;
+            h3 {
+                text-align: center;
+            }
         }
     }
 }

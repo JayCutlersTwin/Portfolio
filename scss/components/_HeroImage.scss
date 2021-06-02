@@ -30,12 +30,14 @@
         margin: 0px;
         font-size: $H1FontSizeSmallestDevice;
         text-shadow: 7px 7px 10px $Black;
+        background-color:rgba(0, 0, 0, 0.3);
     }
     h3 {
         margin-top: 0px;
         font-weight: $fontweightskinny;
         font-size: $H3FontSizeSmallestDevice;
         text-shadow: 7px 7px 10px $Black;
+        background-color:rgba(0, 0, 0, 0.3);
     }
 }
 
@@ -54,6 +56,7 @@
             text-decoration: none;
             font-weight: $fontweightnormal;
             font-size: $FontSizeLargeDevice;
+            text-shadow: 7px 7px 10px $Black;
         }
     }
     .down-arrow {
