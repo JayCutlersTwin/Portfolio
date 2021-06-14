@@ -1,5 +1,10 @@
 @use "../abstracts" as *;
 
+.typed-cursor {
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
 .background {
     display: block;
 }
@@ -24,22 +29,35 @@
     height: auto;
     top: 40%;
     left: 0%;
-    color: $White;
     h1 {
         font-weight: $fontweightbold;
         margin: 0px;
         font-size: $H1FontSizeSmallestDevice;
         text-shadow: 7px 7px 10px $Black;
         background-color:rgba(0, 0, 0, 0.3);
+        color: $White;
     }
-    h3 {
+    .the-box {
+        display: flex;
+        justify-content: center;
+        background-color:rgba(0, 0, 0, 0.3);
         margin-top: 0px;
         font-weight: $fontweightskinny;
         font-size: $H3FontSizeSmallestDevice;
         text-shadow: 7px 7px 10px $Black;
-        background-color:rgba(0, 0, 0, 0.3);
+        color: $White;
+        h3 {
+            margin: 0px;
+        }
+        .type2 {
+            margin-left: 5px;
+        }
     }
+
 }
+                            .H1Span {
+                                font-size: $H3FontSizeSmallestDevice;
+                            }
 
 .scroll-down {
     display: block;

@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
-        <link rel="shortcut icon" type="image/x-icon" href="icons/logoBig.png" />
-        <link rel="stylesheet" href="css/styles.css">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width initial-size=1">
+
+        <link rel="shortcut icon" type="image/x-icon" href="icons/logoBig.png" />
+        <link rel="stylesheet" href="css/styles.css">
+
         <title>James Binding</title>
     </head>
 
@@ -12,20 +14,22 @@
         <script type="text/javascript">document.body.classList.remove('preload')</script>
 
 <!-- Menu Button -->
+
         <div class="hamburger">
             <button type="button" name="button">
-            <div class="sandwich-box">
-                <span class="sandwich"></span>
-                <span class="sandwich"></span>
-                <span class="sandwich"></span>
-            </div>
+                <span class="sandwich-box">
+                    <span class="sandwich"></span>
+                    <span class="sandwich"></span>
+                    <span class="sandwich"></span>
+                </span>
+            </button>
         </div>
 
 <!-- Sidebar menu -->
         <div id="sidebar-menu">
 
                 <div class="Initials">
-                    <a href="index.html" class"initial-anchor">
+                    <a href="index.html">
                         <div class="JB">
                             <span> JB </span>
                         </div>
@@ -70,11 +74,16 @@
                     <div class="image-con-hero">
                         <img id="hero-image" src="images/abstractHeroPicture.jpg" alt="Hero Image">
                         <div class="background-heading">
-                            <span>
-                                <h1>My Name Is James Binding</h1>
-                                <h3>I'm a Web Developer</h3>
-                            </span>
+
+                            <h1 class="typed"></h1>
+                            <div class="the-box">
+                                <h3 class="type"></h3>
+                                <h3 class="type2"></h3>
+                            </div>
+
+
                         </div>
+
                         <div class="scroll-down">
 
                             <h3> <a href="#contact"> scroll down </a> </h3>
@@ -213,12 +222,13 @@
                             </div>
                             <div class="form-inputs">
                                 <form class="contact-us" action="index.html" method="post">
-                                    <input id="first-name" class="form-name" type="text" name="name" placeholder="First Name">
-                                    <input id="second-name" class="form-name" type="text" name="name" placeholder="Last Name">
-                                    <input class"email-box" type="email" name="email" placeholder="Email" required>
-                                    <input class"subject-box" type="text" name="subject" placeholder="Subject">
+                                    <input class="form-name" type="text" name="name" placeholder="First Name">
+                                    <input class="form-name" type="text" name="name" placeholder="Last Name">
+                                    <input type="email" name="email" placeholder="Email" required>
+                                    <input type="text" name="subject" placeholder="Subject">
+
                                     <!-- Change to a text box that can expand once I have completed JS section -->
-                                    <input class"message-box" type="text" name="message" placeholder="Message">
+                                    <input type="text" name="message" placeholder="Message">
                                     <button type="button" name="button">Submit</button>
                                 </form>
                             </div>
@@ -235,6 +245,45 @@
                 </div>
             </section>
         </div>
+
+        <!-- Javascript -->
+
+        <script src="js/typed.js"></script>
+        <script>
+        var typed = new Typed('.typed', {
+            strings: [
+                "My Name Is James Binding",
+            ],
+            typeSpeed: 50,
+            showCursor:false,
+        });
+        </script>
+        <script>
+            var typed1 = new Typed('.type', {
+                strings: ["I'm a "],
+                startDelay: 4000,
+                backSpeed: 100,
+                typeSpeed: 100,
+                showCursor: false,
+            });
+
+            var typed2 = new Typed('.type2', {
+                strings: [
+                    "Web Developer ^1000",
+                    "Web Designer ^1000",
+                    "Freelance Web Designer ^1000",
+                    "Freelancer ^1000",
+                ],
+                startDelay:5000,
+                backSpeed: 100,
+                typeSpeed: 100,
+                loop: true,
+                loopCount: Infinity,
+
+                showCursor: false,
+            });
+            delete typed2.startDelay
+        </script>
 
     </body>
 </html>

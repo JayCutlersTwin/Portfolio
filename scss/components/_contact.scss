@@ -29,9 +29,9 @@
         border: 2px solid $Primary-Color;
         border-radius: 3px;
     }
-    button:hover,
-    button:focus {
-        background-color: $NeonGreen;
+    button:hover {
+        background-color: $Primary-Color;
+        color: $White;
     }
 }
 

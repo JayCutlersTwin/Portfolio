@@ -212,6 +212,11 @@ span .sandwich {
     display: none;
   }
 }
+.typed-cursor {
+  font-weight: 600;
+  font-size: 1.5em;
+}
+
 .background {
   display: block;
 }
@@ -237,7 +242,6 @@ span .sandwich {
   height: auto;
   top: 40%;
   left: 0%;
-  color: #FFFFFF;
 }
 .background-heading h1 {
   font-weight: 600;
@@ -245,13 +249,27 @@ span .sandwich {
   font-size: 1.5em;
   text-shadow: 7px 7px 10px #000000;
   background-color: rgba(0, 0, 0, 0.3);
+  color: #FFFFFF;
 }
-.background-heading h3 {
+.background-heading .the-box {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.3);
   margin-top: 0px;
   font-weight: 300;
   font-size: 0.825em;
   text-shadow: 7px 7px 10px #000000;
-  background-color: rgba(0, 0, 0, 0.3);
+  color: #FFFFFF;
+}
+.background-heading .the-box h3 {
+  margin: 0px;
+}
+.background-heading .the-box .type2 {
+  margin-left: 5px;
+}
+
+.H1Span {
+  font-size: 0.825em;
 }
 
 .scroll-down {
@@ -440,9 +458,9 @@ span .sandwich {
   border: 2px solid #023b45;
   border-radius: 3px;
 }
-.contact-us button:hover,
-.contact-us button:focus {
-  background-color: #00fec8;
+.contact-us button:hover {
+  background-color: #023b45;
+  color: #FFFFFF;
 }
 
 .message-box {

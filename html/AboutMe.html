@@ -2,9 +2,11 @@
 <html lang="en" dir="ltr">
     <head>
         <link rel="shortcut icon" type="image/x-icon" href="../icons/logoBig.png" />
-        <link rel="stylesheet" href="../css/styles.css">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width initial-size=1">
+
+        <link rel="stylesheet" href="../css/styles.css">
+
         <title>James Binding</title>
     </head>
 
@@ -13,17 +15,18 @@
 <!-- Menu Button -->
         <div class="hamburger">
             <button type="button" name="button">
-            <div class="sandwich-box">
-                <span class="sandwich"></span>
-                <span class="sandwich"></span>
-                <span class="sandwich"></span>
-            </div>
+                <span class="sandwich-box">
+                    <span class="sandwich"></span>
+                    <span class="sandwich"></span>
+                    <span class="sandwich"></span>
+                </span>
+            </button>
         </div>
 
 <!-- Sidebar menu -->
         <div id="sidebar-menu">
             <div class="Initials">
-                <a href="../index.html" class"initial-anchor">
+                <a href="../index.html">
                     <div class="JB">
                         <span> JB </span>
                     </div>
@@ -67,7 +70,7 @@
                     <div class="image-con-hero">
                         <img id="hero-image" src="../images/abstractHeroPicture.jpg" alt="Hero Image">
                         <div class="background-heading">
-                            <h1>About Me</h1>
+                            <h1 class="typed"></h1>
                         </div>
                         <div class="scroll-down">
 
@@ -195,6 +198,18 @@
                 </div>
             </section>
         </div>
+
+        <!-- Javascript -->
+        <script src="../js/typed.js"></script>
+        <script>
+        var typed = new Typed('.typed', {
+            strings: [
+                "About Me",
+            ],
+            typeSpeed: 50,
+            showCursor:false,
+        });
+        </script>
 
     </body>
 </html>
