@@ -301,6 +301,13 @@
 
 // Media
 @media (max-width:477px) {
+    .hex-container {
+        margin-left: 0px;
+    }
+    .hex,
+    .hex-hidden {
+        left: calc(50% - (150px / 2));
+    }
     #hex-1,
     #hex-2 {
         margin-bottom: 100px;
