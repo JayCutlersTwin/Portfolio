@@ -10,7 +10,6 @@
 
 // Hex Section
 .hex-container {
-    margin-bottom: 30px;
     position: relative;
     margin-left: 33%;
     height: 100px;
@@ -26,15 +25,119 @@
 }
 
 
+// .hex {
+//     width: 100px;
+//     height: 57px;
+//     background: $Primary-Color;
+//     position: absolute;
+//     margin-bottom: 40px;
+//     img {
+//         width: 40px;
+//         height: 40px;
+//         position: absolute;
+//         top: 20%;
+//         left: 30%;
+//     }
+// }
+// .hex::before {
+//     content: "";
+//     position: absolute;
+//     top: -28px;
+//     left: 0;
+//     width: 0;
+//     height: 0;
+//     border-left: 50px solid transparent;
+//     border-right: 50px solid transparent;
+//     border-bottom: 28px solid $Primary-Color;
+// }
+// .hex::after {
+//     content: "";
+//     position: absolute;
+//     bottom: -28px;
+//     left: 0;
+//     width: 0;
+//     height: 0;
+//     border-left: 50px solid transparent;
+//     border-right: 50px solid transparent;
+//     border-top: 28px solid $Primary-Color;
+// }
+// .hex-hidden{
+//     width: 100px;
+//     height: 57px;
+//     background: $NeonGreen;
+//     position: absolute;
+//     display: none;
+//     margin-bottom: 40px;
+//     img {
+//         width: 40px;
+//         height: 40px;
+//         position: absolute;
+//         top: 20%;
+//         left: 30%;
+//     }
+//     .hex-hidden-name {
+//         color: $Primary-Color;
+//         text-align: center;
+//     }
+// }
+// .hex-hidden::before {
+//     content: "";
+//     position: absolute;
+//     top: -28px;
+//     left: 0;
+//     width: 0;
+//     height: 0;
+//     border-left: 50px solid transparent;
+//     border-right: 50px solid transparent;
+//     border-bottom: 28px solid $NeonGreen;
+// }
+// .hex-hidden::after {
+//     content: "";
+//     position: absolute;
+//     bottom: -28px;
+//     left: 0;
+//     width: 0;
+//     height: 0;
+//     border-left: 50px solid transparent;
+//     border-right: 50px solid transparent;
+//     border-top: 28px solid $NeonGreen;
+// }
+//
+// .hex-container:hover {
+//     .hex::after {
+//         border-top: 27.8675px solid $White;
+//     }
+//     .hex::before {
+//         border-bottom: 27.8675px solid $White;
+//     }
+//     .hex-hidden{
+//         width: 100px;
+//         height: 57px;
+//         background: $NeonGreen;
+//         position: absolute;
+//         display: block;
+//         margin-bottom: 40px;
+//         img {
+//             width: 40px;
+//             height: 40px;
+//             position: absolute;
+//             top: 20%;
+//             left: 30%;
+//         }
+//     }
+// }
+
+
+// Bigger Hexes: To go back to regular size jusdt divide everything by 1.5
 .hex {
-    width: 100px;
-    height: 57px;
+    width: 150px;
+    height: 85.5px;
     background: $Primary-Color;
     position: absolute;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     img {
-        width: 40px;
-        height: 40px;
+        width: 60px;
+        height: 60px;
         position: absolute;
         top: 20%;
         left: 30%;
@@ -43,35 +146,35 @@
 .hex::before {
     content: "";
     position: absolute;
-    top: -28px;
+    top: -42px;
     left: 0;
     width: 0;
     height: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-bottom: 28px solid $Primary-Color;
+    border-left: 75px solid transparent;
+    border-right: 75px solid transparent;
+    border-bottom: 42px solid $Primary-Color;
 }
 .hex::after {
     content: "";
     position: absolute;
-    bottom: -28px;
+    bottom: -42px;
     left: 0;
     width: 0;
     height: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-top: 28px solid $Primary-Color;
+    border-left: 75px solid transparent;
+    border-right: 75px solid transparent;
+    border-top: 42px solid $Primary-Color;
 }
 .hex-hidden{
-    width: 100px;
-    height: 57px;
+    width: 150px;
+    height: 85.5px;
     background: $NeonGreen;
     position: absolute;
     display: none;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     img {
-        width: 40px;
-        height: 40px;
+        width: 60px;
+        height: 60px;
         position: absolute;
         top: 20%;
         left: 30%;
@@ -84,43 +187,43 @@
 .hex-hidden::before {
     content: "";
     position: absolute;
-    top: -28px;
+    top: -42px;
     left: 0;
     width: 0;
     height: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-bottom: 28px solid $NeonGreen;
+    border-left: 75px solid transparent;
+    border-right: 75px solid transparent;
+    border-bottom: 42px solid $NeonGreen;
 }
 .hex-hidden::after {
     content: "";
     position: absolute;
-    bottom: -28px;
+    bottom: -42px;
     left: 0;
     width: 0;
     height: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-top: 28px solid $NeonGreen;
+    border-left: 75px solid transparent;
+    border-right: 75px solid transparent;
+    border-top: 42px solid $NeonGreen;
 }
 
 .hex-container:hover {
     .hex::after {
-        border-top: 27.8675px solid $White;
+        border-top: 41.80125px solid $White;
     }
     .hex::before {
-        border-bottom: 27.8675px solid $White;
+        border-bottom: 41.80125px solid $White;
     }
     .hex-hidden{
-        width: 100px;
-        height: 57px;
+        width: 150px;
+        height: 85.5px;
         background: $NeonGreen;
         position: absolute;
         display: block;
         margin-bottom: 40px;
         img {
-            width: 40px;
-            height: 40px;
+            width: 60px;
+            height: 60px;
             position: absolute;
             top: 20%;
             left: 30%;
@@ -128,7 +231,22 @@
     }
 }
 
+.gauge-title {
+    display: block;
+    position: absolute;
+    top: -40%;
+    left: 6%;
+    color: $Primary-Color;
+    font-size: 12px;
+}
 
+.cssTitle {
+    left: 13%;
+}
+
+.htmlTitle {
+    left: 10%;
+}
 
 // Qualifications/Language
 
@@ -182,17 +300,27 @@
 
 
 // Media
-@media (min-width:350px) {
+@media (max-width:477px) {
+    #hex-1,
+    #hex-2 {
+        margin-bottom: 100px;
+    }
+    #hex-3 {
+        margin-bottom: 40px;
+    }
+}
+@media (min-width:478px) {
     .hex-images {
         flex-direction: row;
     }
     #hex-1 {
-        margin-left: -90px;
+        margin-left: -150px;
+        margin-bottom: 60px;
     }
 
     #hex-2,
     #hex-3 {
-
+        margin-bottom: 60px;
     }
 
 }

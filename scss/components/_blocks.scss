@@ -33,12 +33,42 @@
         position: absolute;
         text-decoration: none;
         color: $White;
-        left: -250px;
+        left: -255px;
+        margin-top: 10px;
+        top: 10%;
+        transform: translateX(0px);
+        transition-duration: .4s;
+        transition-timing-function: ease-in-out;
+        text-shadow: 7px 7px 10px $Black;
+        width: 45%;
+    }
+
+    //coding Examples Languages
+    .project-coding-languages {
+        display: block;
+        position: absolute;
+        text-decoration: none;
+        color: $White;
+        right: -350px;
         bottom: 0px;
         transform: translateX(0px);
         transition-duration: .4s;
         transition-timing-function: ease-in-out;
-
+        text-shadow: 7px 7px 10px $Black;
+        width: 45%;
+    }
+    .project-coding-languages {
+        display: block;
+        position: absolute;
+        text-decoration: none;
+        color: $White;
+        right: -350px;
+        bottom: 0px;
+        transform: translateX(0px);
+        transition-duration: .4s;
+        transition-timing-function: ease-in-out;
+        text-shadow: 7px 7px 10px $Black;
+        width: 45%;
     }
 }
 
@@ -63,6 +93,13 @@
             display: block;
             position: absolute;
             transform: translateX(260px);
+            transition-duration: .4s;
+            transition-timing-function: ease-in-out;
+        }
+        .project-coding-languages {
+            display: block;
+            position: absolute;
+            transform: translateX(-350px);
             transition-duration: .4s;
             transition-timing-function: ease-in-out;
         }

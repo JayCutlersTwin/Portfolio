@@ -7,6 +7,12 @@
 
         <link rel="stylesheet" href="../css/styles.css">
 
+        <script type="text/javascript" src="../js/gauge/raphael.min.js"></script>
+        <script type="text/javascript" src="../js/gauge/justgage.js"></script>
+
+
+
+
         <title>James Binding</title>
     </head>
 
@@ -110,9 +116,16 @@
                             </div>
 
                             <div class="hex-hidden">
-                                <img src="../icons/pythonGreen.svg" alt="Placeholder">
+                                <!-- <img src="../icons/pythonGreen.svg" alt="Placeholder"> -->
+                                <h6 class="gauge-title">Python Proficency</h6>
+                                <div id="pythonBox" style="width:150px; height:130px; display:block; position:absolute; top:-20%; left:0%;">
+
+                                </div>
                             </div>
                         </div>
+
+
+
 
                         <div class="hex-container" id="hex-2">
                             <div class="hex">
@@ -120,7 +133,11 @@
                             </div>
 
                             <div class="hex-hidden">
-                                <img src="../icons/css3Green.svg" alt="Placeholder">
+                                <!-- <img src="../icons/css3Green.svg" alt="Placeholder"> -->
+                                <h6 class="gauge-title cssTitle">CSS Proficency</h6>
+                                <div id="cssBox" style="width:150px; height:130px; display:block; position:absolute; top:-20%; left:0%;">
+
+                                </div>
                             </div>
                         </div>
 
@@ -130,7 +147,9 @@
                             </div>
 
                             <div class="hex-hidden">
-                                <img src="../icons/htmlGreen.svg" alt="Placeholder">
+                                <!-- <img src="../icons/htmlGreen.svg" alt="Placeholder"> -->
+                                <h6 class="gauge-title htmlTitle">HTML Proficency</h6>
+                                <div id="htmlBox" style="width:150px; height:130px; display:block; position:absolute; top:-20%; left:0%;">
                             </div>
                         </div>
                     </div>
@@ -200,6 +219,108 @@
         </div>
 
         <!-- Javascript -->
+
+
+        <script>
+            var g1 = new JustGage({
+                id:"pythonBox",
+                label: "Intermediate",
+                labelFontColor: "#000000",
+                value: 0,
+                min:0,
+                max:100,
+                customSectors: {
+                        percents: true, // lo and hi values are in %
+                        ranges: [{
+                        color : "#ff3b30",
+                        lo : 0,
+                        hi : 30
+                    },
+                    {
+                        color : "#FFFF00",
+                        lo : 31,
+                        hi : 69
+                    },
+                    {
+                        color : "#023b45",
+                        lo : 70,
+                        hi : 100
+                    }]
+                }
+            });
+
+            var g2 = new JustGage({
+                id:"cssBox",
+                label: "Garbage",
+                labelFontColor: "#000000",
+                value: 15,
+                min:0,
+                max:100,
+                customSectors: {
+                        percents: true, // lo and hi values are in %
+                        ranges: [{
+                        color : "#ff3b30",
+                        lo : 0,
+                        hi : 30
+                    },
+                    {
+                        color : "#FFFF00",
+                        lo : 31,
+                        hi : 69
+                    },
+                    {
+                        color : "#023b45",
+                        lo : 70,
+                        hi : 100
+                    }]
+                }
+            });
+
+            var g3 = new JustGage({
+                id:"htmlBox",
+                label: "average",
+                labelFontColor: "#000000",
+                value: 0,
+                min:0,
+                max:100,
+                customSectors: {
+                        percents: true, // lo and hi values are in %
+                        ranges: [{
+                        color : "#ff3b30",
+                        lo : 0,
+                        hi : 30
+                    },
+                    {
+                        color : "#FFFF00",
+                        lo : 31,
+                        hi : 69
+                    },
+                    {
+                        color : "#023b45",
+                        lo : 70,
+                        hi : 100
+                    }]
+                }
+            });
+
+            document.getElementById('pythonBox').addEventListener('mouseover', function() {
+                g1.refresh(70);
+            });
+
+            document.getElementById('cssBox').addEventListener('mouseover', function() {
+                g2.refresh(30);
+            });
+
+            document.getElementById('htmlBox').addEventListener('mouseover', function() {
+                g3.refresh(50);
+            });
+
+        </script>
+
+
+
+
+
         <script src="../js/typed.js"></script>
         <script>
         var typed = new Typed('.typed', {
