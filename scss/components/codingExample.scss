@@ -1,0 +1,110 @@
+@use "../abstracts" as *;
+
+.codingExample-container {
+    text-align: center;
+    .container-title {
+        font-size: $H1FontSizeSmallestDevice;
+    }
+    .codingExample-small-container {
+        background-color: $Primary-Color;
+        padding: 20px;
+        border-radius: 5px;
+        border: none;
+        color: $White;
+        margin-top: 20px;
+        box-shadow: 1px 1px 10px $Black;
+        h3 {
+            margin-bottom: 0px;
+        }
+        .codingExample-imageAndCaption-container {
+            display: flex;
+            margin-top: 20px;
+            align-items: center;
+            .codingExample-image {
+                max-width: 100%;
+
+                img {
+                    display: block;
+                    width: 100%;
+                    box-shadow: 1px 1px 10px #000000;
+                }
+            }
+            .codingExample-Caption {
+                h5 {
+                    text-align: center;
+                }
+                p {
+                    letter-spacing: 0.1rem;
+                    line-height: 25px;
+                    font-size: $FontSizeSmallestDevice;
+                }
+            }
+        }
+
+    }
+}
+
+.checkItOut-container {
+    width: 100%;
+    margin: 20px 0px;
+    a span {
+        margin: 20px 0px;
+        padding: 10px;
+        background-color: $White;
+        color: $Primary-Color;
+        border-radius: 3px;
+        border:none;
+        font-size: 1.5em;
+    }
+}
+
+.checkItOut-container a:hover span{
+    background-color: $NeonGreen;
+    color: $White;
+}
+
+// Media queries
+@media (min-width:576px) {
+
+}
+
+
+@media (min-width:768px) {
+    .container-title {
+        text-align: center;
+    }
+}
+
+@media (max-width:991px) {
+    .codingExample-imageAndCaption-container {
+        flex-direction: column;
+    }
+    .codingExample-Caption {
+        max-width: 378px;
+    }
+}
+@media (min-width:992px) {
+    #codingExample-imageAndCaption-container-middle {
+        flex-direction: row-reverse;
+    }
+    .codingExample-container h3 {
+        text-align: center;
+    }
+
+    .codingExample-small-container {
+        margin-top: 0px;
+    }
+
+    .codingExample-Caption {
+        margin-left: 20px;
+        margin-right: 20px;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (min-width:1200px) {
+    .codingExamples-container {
+        padding: 0px 20px;
+    }
+}

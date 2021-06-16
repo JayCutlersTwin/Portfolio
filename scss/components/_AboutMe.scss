@@ -139,8 +139,8 @@
         width: 60px;
         height: 60px;
         position: absolute;
-        top: 20%;
-        left: 30%;
+        top: calc(50% - (60px / 2));
+        left: calc(50% - (60px / 2));
     }
 }
 .hex::before {
@@ -172,13 +172,6 @@
     position: absolute;
     display: none;
     margin-bottom: 60px;
-    img {
-        width: 60px;
-        height: 60px;
-        position: absolute;
-        top: 20%;
-        left: 30%;
-    }
     .hex-hidden-name {
         color: $Primary-Color;
         text-align: center;

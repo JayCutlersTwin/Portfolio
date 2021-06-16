@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <link rel="shortcut icon" type="image/x-icon" href="../../icons/logoBig.png" />
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="../../css/styles.css">
+
+        <title>James Binding</title>
+    </head>
+
+    <body class="preload">
+        <script type="text/javascript">document.body.classList.remove('preload')</script>
+<!-- Menu Button -->
+        <div class="hamburger">
+            <button type="button" name="button">
+                <span class="sandwich-box">
+                    <span class="sandwich"></span>
+                    <span class="sandwich"></span>
+                    <span class="sandwich"></span>
+                </span>
+            </button>
+        </div>
+
+<!-- Sidebar menu -->
+        <div id="sidebar-menu">
+
+            <div class="Initials">
+                <a href="../../index.html">
+                    <div class="JB">
+                        <span> JB </span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="list-compartment">
+                <ul>
+                    <li><a href="../../index.html#blocks">My Portfolio</a></li>
+                    <li><a href="../../index.html#contact">Contact Me</a></li>
+                    <li><a href="../AboutMe.html">About Me</a></li>
+                    <li><a href="../CodingExamples.html">Coding Examples</a></li>
+                    <li><a href="../SCSScheme.html">SCS Scheme</a></li>
+                </ul>
+
+                <div class="social-media">
+                    <div class="icon-block-container">
+                        <a target="_blank" href="https://www.linkedin.com/in/james-binding-123abc">
+                            <span class="icon-block" id="LinkedIn">
+                                <img class="hidden-icon" src="../../icons/linkedin.svg" alt="LinkedIn">
+                                <img class="showing-icon" src="../../icons/linkedin.svg" alt="LinkedIn">
+                            </span>
+                        </a>
+                    </div>
+                    <div class="icon-block-container">
+                        <a target="_blank" href="https://github.com/JayCutlersTwin">
+                            <span class="icon-block" id="Github">
+                                <img class="hidden-icon" src="../../icons/github.svg" alt="Github">
+                                <img class="showing-icon" src="../../icons/github.svg" alt="Github">
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!-- Hero Image panel -->
+        <div class="body-container">
+            <section id="banner-section">
+                <div class="background">
+                    <div class="image-con-hero">
+                        <img id="hero-image" src="../../images/abstractHeroPicture.jpg" alt="Hero Image">
+                        <div class="background-heading">
+                                <h1 class="typed"></h1>
+                                <!-- <h3>I'm a Web Developer</h3> -->
+                        </div>
+                        <div class="scroll-down">
+
+                                <h3><a href="#codingExample-section"> scroll down </a></h3>
+                                <span class="down-arrow">
+                                    <img src="../../icons/arrow-down.svg" alt="down arrow">
+                                </span>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="codingExample-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="codingExample-container">
+
+                            <h1 class="container-title"> Portfolio Coding Example</h1>
+                            <div>
+                                <div class="codingExample-small-container">
+                                    <h3>Hexagon Shape Example</h3>
+
+                                    <div class="codingExample-imageAndCaption-container">
+                                        <div class="codingExample-image">
+                                            <img src="../../images/codingExamples/example1/hex-body.jpg" alt="Code from the hex body">
+                                        </div>
+
+                                        <div class="codingExample-Caption">
+                                            <h5>Hex body</h5>
+                                            <p>
+                                                The image on the left displays the code for the hexagon body I used to create on my about page.
+                                                I have used the class selector to create the main body. I have then nested the img element inside
+                                                to target the icons of the Languages I have used. I have sized these and used calc to center them
+                                                inside of the hexagon.
+                                            </p>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="codingExample-imageAndCaption-container" id="codingExample-imageAndCaption-container-middle">
+
+                                        <div class="codingExample-image">
+                                            <img src="../../images/codingExamples/example1/hex-before.jpg" alt="Code from the hex body">
+                                        </div>
+
+                                        <div class="codingExample-Caption">
+                                            <h5>Hex Top</h5>
+                                            <p>
+                                                The image on the right displays my use of pseudo element (::before). This is the same as the bottom
+                                                of the hex as they were made symmetrically. I used position: absolute so I could position the edges
+                                                to line up with the body. I then used the borders to create the end of the hexagon utilising the
+                                                transparent property value. Throughout this project I was using SCSS to create partials and organize
+                                                my work. As you can see from the $Primary-color. This was used throughout the project so if I wanted a
+                                                color swap I would only have to change one color code in one place instead of multiple.
+                                            </p>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="codingExample-imageAndCaption-container">
+
+                                        <div class="codingExample-image">
+                                            <img src="../../images/codingExamples/example1/hex-after.jpg" alt="Code from the hex body">
+                                        </div>
+
+                                        <div class="codingExample-Caption">
+                                            <h5>Hex Bottom</h5>
+                                            <p>
+                                                The image on the left displays my use of pseudo element (::after). This is the same as the top
+                                                of the hex as they were made symmetrically. I used position: absolute so I could position the edges
+                                                to line up with the body. I then used the borders to create the end of the hexagon utilising the
+                                                transparent property value. Throughout this project I was using SCSS to create partials and organize
+                                                my work. As you can see from the $Primary-color. This was used throughout the project so if I wanted a
+                                                color swap I would only have to change one color code in one place instead of multiple.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="checkItOut-container">
+                                        <a href="../AboutMe.html#hexagon">
+                                            <span>
+                                                Check It Out!
+                                            </span>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact">
+                <div class="scroll-up">
+
+                        <span class="up-arrow">
+                            <img src="../../icons/arrow-up.svg" alt="up arrow">
+                        </span>
+                        <h3> <a href="#">Scroll up </a></h3>
+
+                </div>
+            </section>
+        </div>
+
+        <!-- Javascript -->
+        <script src="../../js/typed.js"></script>
+        <script>
+        var typed = new Typed('.typed', {
+            strings: [
+                "Portfolio Coding Example",
+            ],
+            typeSpeed: 50,
+            showCursor:false,
+        });
+        </script>
+
+    </body>
+</html>
