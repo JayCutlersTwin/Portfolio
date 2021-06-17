@@ -14,23 +14,46 @@
     margin-right: 0;
     .split-input {
         display: flex;
+        position: relative;
         justify-content: space-between;
         .form-name {
             width: 50%;
         }
+        label {
+            display: block;
+            position: absolute;
+            background-color: $White;
+            font-size: 16px;
+            text-align: center;
+            padding: 5px;
+            left: 2%;
+            color: $DisabledGray;
+        }
     }
+
     .rest-of-inputs {
         display: flex;
+        position: relative;
         width: 100%;
         flex-direction: column;
+        label {
+            display: block;
+            position: absolute;
+            background-color: $White;
+            font-size: 16px;
+            text-align: center;
+            left: 2%;
+            padding: 5px;
+            color: $DisabledGray;
+        }
     }
     input {
         font-size: 1em;
         margin-bottom: 20px;
         margin-right: 5px;
         border-radius: 3px;
-        border: none;
-        background-color: $LightSteelBlue;
+        border: 1px solid $Black;
+        background-color: $White;
         height: 30px;
         padding: 10px 10px;
     }
@@ -50,11 +73,103 @@
     }
 }
 
+// Contact-Form ANIMATION //////////////////////////////////////////////////////////////
+
+input:focus {
+    outline-color: $Primary-Color;
+    // border: 1px solid $Primary-Color;
+}
+
+input:focus + #firstNameMover {
+    transform: translateY(-24px);
+    transition-duration: 200ms;
+    font-size: 12px;
+    color: $Black;
+}
+input:valid + #firstNameMover {
+    transform: translateY(-24px);
+    font-size: 12px;
+    color: $Black;
+}
+#firstNameMover {
+    transform: translateY(0px);
+    transition-duration: 200ms;
+    top: 12px;
+}
+
+input:focus + #lastNameMover {
+    transform: translateY(-24px);
+    transition-duration: 200ms;
+    font-size: 12px;
+    color: $Black;
+}
+input:valid + #lastNameMover {
+    transform: translateY(-24px);
+    font-size: 12px;
+    color: $Black;
+}
+#lastNameMover {
+    transform: translateY(0px);
+    transition-duration: 200ms;
+    top: 12px;
+    left: 52%;
+}
+
+input:focus + #emailMover {
+    transform: translateY(-24px);
+    transition-duration: 200ms;
+    font-size: 12px;
+    color: $Black;
+}
+input:valid + #emailMover {
+    transform: translateY(-24px);
+    font-size: 12px;
+    color: $Black;
+}
+#emailMover {
+    transform: translateY(0px);
+    transition-duration: 200ms;
+    top: 12px;
+}
+
+input:focus + #subjectMover {
+    transform: translateY(-24px);
+    transition-duration: 200ms;
+    font-size: 12px;
+    color: $Black;
+}
+input:valid + #subjectMover {
+    transform: translateY(-24px);
+    font-size: 12px;
+    color: $Black;
+}
+#subjectMover {
+    transform: translateY(0px);
+    transition-duration: 200ms;
+    top: 85px;
+}
+
+input:focus + #messageMover {
+    transform: translateY(-24px);
+    transition-duration: 200ms;
+    font-size: 12px;
+    color: $Black;
+}
+input:valid + #messageMover {
+    transform: translateY(-24px);
+    font-size: 12px;
+    color: $Black;
+}
+#messageMover {
+    transform: translateY(0px);
+    transition-duration: 200ms;
+    top: 155px;
+}
+// END OF ANIMATION//////////////////////////////////////////////////////////////////////
+
 .message-box {
     resize: both;
 }
-
-
 
 .scroll-up {
     text-align: center;

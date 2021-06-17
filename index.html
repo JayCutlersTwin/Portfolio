@@ -231,17 +231,27 @@
                                 <p>If you are sending an email I will get back to you within 24 hours. If you are calling and I do not pick up leave a message with a contact number where I can call back.</p>
                             </div>
                             <div class="form-inputs">
-                                <form class="contact-us" action="index.html" method="post">
+                                <form class="contact-us" action="index.html" method="post" autocomplete="off">
                                     <div class="split-input">
-                                        <input class="form-name" type="text" name="name" placeholder="First Name">
-                                        <input class="form-name" type="text" name="name" placeholder="Last Name">
+
+                                        <input class="form-name" type="text" name="firstName" id="firstName" required>
+                                        <label id="firstNameMover" class="movingLabel" for="firstName">First Name</label>
+
+                                        <input class="form-name" type="text" name="lastName" id="lastName" required>
+                                        <label id="lastNameMover" class="movingLabel" for="lastName">Last Name</label>
                                     </div>
                                     <div class="rest-of-inputs">
-                                        <input type="email" name="email" placeholder="Email" required>
-                                        <input type="text" name="subject" placeholder="Subject">
+
+                                        <!-- type iis staying as text for the time being as I want the animation to work how it is I will work on this later when I start linking the form. -->
+                                        <input type="text" name="email" id="email" required>
+                                        <label id="emailMover" class="movingLabel" for="email">Email</label>
+
+                                        <input type="text" name="subject" id="subject" required>
+                                        <label id="subjectMover" class="movingLabel" for="subject">Subject</label>
 
                                         <!-- Change to a text box that can expand once I have completed JS section -->
-                                        <input type="text" name="message" placeholder="Message">
+                                        <input type="text" name="message" id="message" required>
+                                        <label id="messageMover" class="movingLabel" for="message">Message</label>
                                     </div>
 
                                     <button type="button" name="button">Submit</button>

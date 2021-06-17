@@ -498,23 +498,45 @@ span .sandwich {
 }
 .contact-us .split-input {
   display: flex;
+  position: relative;
   justify-content: space-between;
 }
 .contact-us .split-input .form-name {
   width: 50%;
 }
+.contact-us .split-input label {
+  display: block;
+  position: absolute;
+  background-color: #FFFFFF;
+  font-size: 16px;
+  text-align: center;
+  padding: 5px;
+  left: 2%;
+  color: #808080;
+}
 .contact-us .rest-of-inputs {
   display: flex;
+  position: relative;
   width: 100%;
   flex-direction: column;
+}
+.contact-us .rest-of-inputs label {
+  display: block;
+  position: absolute;
+  background-color: #FFFFFF;
+  font-size: 16px;
+  text-align: center;
+  left: 2%;
+  padding: 5px;
+  color: #808080;
 }
 .contact-us input {
   font-size: 1em;
   margin-bottom: 20px;
   margin-right: 5px;
   border-radius: 3px;
-  border: none;
-  background-color: #B4CDED;
+  border: 1px solid #000000;
+  background-color: #FFFFFF;
   height: 30px;
   padding: 10px 10px;
 }
@@ -531,6 +553,106 @@ span .sandwich {
 .contact-us button:hover {
   background-color: #023b45;
   color: #FFFFFF;
+}
+
+input:focus {
+  outline-color: #023b45;
+}
+
+input:focus + #firstNameMover {
+  transform: translateY(-24px);
+  transition-duration: 200ms;
+  font-size: 12px;
+  color: #000000;
+}
+
+input:valid + #firstNameMover {
+  transform: translateY(-24px);
+  font-size: 12px;
+  color: #000000;
+}
+
+#firstNameMover {
+  transform: translateY(0px);
+  transition-duration: 200ms;
+  top: 12px;
+}
+
+input:focus + #lastNameMover {
+  transform: translateY(-24px);
+  transition-duration: 200ms;
+  font-size: 12px;
+  color: #000000;
+}
+
+input:valid + #lastNameMover {
+  transform: translateY(-24px);
+  font-size: 12px;
+  color: #000000;
+}
+
+#lastNameMover {
+  transform: translateY(0px);
+  transition-duration: 200ms;
+  top: 12px;
+  left: 52%;
+}
+
+input:focus + #emailMover {
+  transform: translateY(-24px);
+  transition-duration: 200ms;
+  font-size: 12px;
+  color: #000000;
+}
+
+input:valid + #emailMover {
+  transform: translateY(-24px);
+  font-size: 12px;
+  color: #000000;
+}
+
+#emailMover {
+  transform: translateY(0px);
+  transition-duration: 200ms;
+  top: 12px;
+}
+
+input:focus + #subjectMover {
+  transform: translateY(-24px);
+  transition-duration: 200ms;
+  font-size: 12px;
+  color: #000000;
+}
+
+input:valid + #subjectMover {
+  transform: translateY(-24px);
+  font-size: 12px;
+  color: #000000;
+}
+
+#subjectMover {
+  transform: translateY(0px);
+  transition-duration: 200ms;
+  top: 85px;
+}
+
+input:focus + #messageMover {
+  transform: translateY(-24px);
+  transition-duration: 200ms;
+  font-size: 12px;
+  color: #000000;
+}
+
+input:valid + #messageMover {
+  transform: translateY(-24px);
+  font-size: 12px;
+  color: #000000;
+}
+
+#messageMover {
+  transform: translateY(0px);
+  transition-duration: 200ms;
+  top: 155px;
 }
 
 .message-box {
