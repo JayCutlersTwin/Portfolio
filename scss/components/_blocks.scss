@@ -140,20 +140,19 @@
 }
 
 .TrioBlock {
-    display: flex;
+    display: block;
 }
-
 // Media
 
 @media (max-width:991px) {
-    .TrioBlock {
-        flex-direction: column;
-    }
     .image-con {
         height: auto;
     }
 }
 @media (min-width:992px) {
+    .TrioBlock {
+        display: flex;
+    }
     .project-cap {
         text-align: center;
     }

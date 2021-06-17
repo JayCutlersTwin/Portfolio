@@ -80,7 +80,7 @@ span .sandwich {
 #sidebar-menu {
   position: fixed;
   width: 200px;
-  height: 100%;
+  height: 100vh;
   border-right: 3px solid #023b45;
 }
 
@@ -212,6 +212,15 @@ span .sandwich {
     display: none;
   }
 }
+@media screen and (orientation: landscape) {
+  .initials {
+    display: none;
+  }
+
+  #sidebar-menu {
+    height: 100vh;
+  }
+}
 .typed-cursor {
   font-weight: 600;
   font-size: 1.5em;
@@ -320,6 +329,11 @@ span .sandwich {
 @media (min-width: 1417px) {
   #hero-image {
     width: 100%;
+  }
+}
+@media screen and (orientation: landscape) {
+  #hero-image {
+    width: 100vw;
   }
 }
 .block-con {
@@ -452,19 +466,19 @@ span .sandwich {
 }
 
 .TrioBlock {
-  display: flex;
+  display: block;
 }
 
 @media (max-width: 991px) {
-  .TrioBlock {
-    flex-direction: column;
-  }
-
   .image-con {
     height: auto;
   }
 }
 @media (min-width: 992px) {
+  .TrioBlock {
+    display: flex;
+  }
+
   .project-cap {
     text-align: center;
   }

@@ -119,3 +119,11 @@
         width:100%;
     }
 }
+
+
+
+@media screen and (orientation: landscape) {
+    #hero-image {
+        width: 100vw;
+    }
+}

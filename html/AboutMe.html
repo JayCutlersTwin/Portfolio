@@ -115,7 +115,7 @@
                                 <img src="../icons/python.svg" alt="Placeholder">
                             </div>
 
-                            <div class="hex-hidden">
+                            <div class="hex-hidden" id="python-hex">
                                 <!-- <img src="../icons/pythonGreen.svg" alt="Placeholder"> -->
                                 <h6 class="gauge-title">Python Proficency</h6>
                                 <div id="pythonBox" style="width:150px; height:130px; display:block; position:absolute; top:-20%; left:0%;">
@@ -132,7 +132,7 @@
                                 <img src="../icons/css3.svg" alt="Placeholder">
                             </div>
 
-                            <div class="hex-hidden">
+                            <div class="hex-hidden" id="CSS-hex">
                                 <!-- <img src="../icons/css3Green.svg" alt="Placeholder"> -->
                                 <h6 class="gauge-title cssTitle">CSS Proficency</h6>
                                 <div id="cssBox" style="width:150px; height:130px; display:block; position:absolute; top:-20%; left:0%;">
@@ -146,7 +146,7 @@
                                 <img src="../icons/html.svg" alt="Placeholder">
                             </div>
 
-                            <div class="hex-hidden">
+                            <div class="hex-hidden" id="HTML-hex">
                                 <!-- <img src="../icons/htmlGreen.svg" alt="Placeholder"> -->
                                 <h6 class="gauge-title htmlTitle">HTML Proficency</h6>
                                 <div id="htmlBox" style="width:150px; height:130px; display:block; position:absolute; top:-20%; left:0%;">
@@ -255,7 +255,7 @@
                 id:"cssBox",
                 label: "Garbage",
                 labelFontColor: "#000000",
-                value: 15,
+                value: 0,
                 min:0,
                 max:100,
                 customSectors: {
@@ -305,15 +305,24 @@
                 }
             });
 
-            document.getElementById('pythonBox').addEventListener('mouseover', function() {
+            // document.getElementById('pythonBox').addEventListener('mouseover', function() {
+            //     g1.refresh(70);
+            // });
+            document.getElementById('python-hex').addEventListener('mouseover', function() {
                 g1.refresh(70);
             });
 
-            document.getElementById('cssBox').addEventListener('mouseover', function() {
+            // document.getElementById('cssBox').addEventListener('mouseover', function() {
+            //     g2.refresh(30);
+            // });
+            document.getElementById('CSS-hex').addEventListener('mouseover', function() {
                 g2.refresh(30);
             });
 
-            document.getElementById('htmlBox').addEventListener('mouseover', function() {
+            // document.getElementById('htmlBox').addEventListener('mouseover', function() {
+            //     g3.refresh(50);
+            // });
+            document.getElementById('HTML-hex').addEventListener('mouseover', function() {
                 g3.refresh(50);
             });
 
