@@ -80,6 +80,14 @@ input:focus {
     // border: 1px solid $Primary-Color;
 }
 
+input:-webkit-autofill + #firstNameMover,
+input:-webkit-autofill:hover + #firstNameMover,
+input:-webkit-autofill:focus + #firstNameMover {
+    transform: translateY(-24px);
+    transition-duration: 200ms;
+    font-size: 12px;
+    color: $Black;
+}
 input:focus + #firstNameMover {
     transform: translateY(-24px);
     transition-duration: 200ms;
@@ -97,6 +105,14 @@ input:valid + #firstNameMover {
     top: 12px;
 }
 
+input:-webkit-autofill + #lastNameMover,
+input:-webkit-autofill:hover + #lastNameMover,
+input:-webkit-autofill:focus + #lastNameMover {
+    transform: translateY(-24px);
+    transition-duration: 200ms;
+    font-size: 12px;
+    color: $Black;
+}
 input:focus + #lastNameMover {
     transform: translateY(-24px);
     transition-duration: 200ms;
@@ -115,6 +131,14 @@ input:valid + #lastNameMover {
     left: 52%;
 }
 
+input:-webkit-autofill + #emailMover,
+input:-webkit-autofill:hover + #emailMover,
+input:-webkit-autofill:focus + #emailMover {
+    transform: translateY(-24px);
+    transition-duration: 200ms;
+    font-size: 12px;
+    color: $Black;
+}
 input:focus + #emailMover {
     transform: translateY(-24px);
     transition-duration: 200ms;
@@ -164,6 +188,19 @@ input:valid + #messageMover {
     transform: translateY(0px);
     transition-duration: 200ms;
     top: 155px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: $Black;
+  -webkit-box-shadow: 0 0 0px 1000px $White inset;
 }
 // END OF ANIMATION//////////////////////////////////////////////////////////////////////
 
