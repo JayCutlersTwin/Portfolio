@@ -25,7 +25,6 @@
     max-width: 100%;
     border: none;
     border-radius: 5px;
-    // box-shadow: 1px 1px 10px $Black;
     .project-images {
         transform: scale(1);
         transition: transform .4s ease;
@@ -89,6 +88,9 @@
 .block-con a:hover {
     .project-cap {
         color: lighten($Black, $FiftyPercent);
+        .block-heading-and-arrow span svg path {
+            fill: lighten($Black, $FiftyPercent);
+        }
     }
     .image-con {
         border-radius: 10px;

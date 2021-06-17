@@ -404,6 +404,9 @@ span .sandwich {
 .block-con a:hover .project-cap {
   color: gray;
 }
+.block-con a:hover .project-cap .block-heading-and-arrow span svg path {
+  fill: gray;
+}
 .block-con a:hover .image-con {
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -1105,16 +1108,17 @@ select:-webkit-autofill:focus {
 .checkItOut-container a span {
   margin: 20px 0px;
   padding: 10px;
-  background-color: #FFFFFF;
-  color: #023b45;
+  background-color: #023b45;
+  color: #FFFFFF;
   border-radius: 3px;
-  border: none;
+  border: 1px solid #FFFFFF;
   font-size: 1.5em;
 }
 
 .checkItOut-container a:hover span {
-  background-color: #00fec8;
-  color: #FFFFFF;
+  background-color: #FFFFFF;
+  color: #023b45;
+  border: none;
 }
 
 @media (min-width: 768px) {

@@ -50,17 +50,18 @@
     a span {
         margin: 20px 0px;
         padding: 10px;
-        background-color: $White;
-        color: $Primary-Color;
+        background-color: $Primary-Color;
+        color: $White;
         border-radius: 3px;
-        border:none;
+        border: 1px solid $White;
         font-size: 1.5em;
     }
 }
 
 .checkItOut-container a:hover span{
-    background-color: $NeonGreen;
-    color: $White;
+    background-color: $White;
+    color: $Primary-Color;
+    border:none;
 }
 
 // Media queries
