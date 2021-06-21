@@ -38,13 +38,13 @@
 
 
             <div class="list-compartment">
-                <ul>
-                    <li><a href="#blocks">My Portfolio</a></li>
-                    <li><a href="#contact">Contact Me</a></li>
-                    <li><a href="html/AboutMe.html">About Me</a></li>
-                    <li><a href="html/CodingExamples.html">Coding Examples</a></li>
-                    <li><a href="html/SCSScheme.html">SCS Scheme</a></li>
-                </ul>
+                    <ul>
+                        <li><a href="#blocks">My Portfolio</a></li>
+                        <li><a href="#contact">Contact Me</a></li>
+                        <li><a href="html/AboutMe.html">About Me</a></li>
+                        <li><a href="html/CodingExamples.html">Coding Examples</a></li>
+                        <li><a href="html/SCSScheme.html">SCS Scheme</a></li>
+                    </ul>
 
                 <div class="social-media">
                     <div class="icon-block-container">
@@ -250,8 +250,8 @@
                             <div class="contact-description">
                                 <h1>Get In Touch</h1>
                                 <p> To get in touch with me use the mobile number or the email below.</p>
-                                <h3>07542636156</h3>
-                                <h3>Jbinding195@gmail.com</h3>
+                                <a href="tel: 07542636156"><h3>07542636156</h3></a>
+                                <a href="mailto: Jbinding195@gmail.com"><h3>Jbinding195@gmail.com</h3></a>
                                 <p>If you are sending an email I will get back to you within 24 hours. If you are calling and I do not pick up leave a message with a contact number where I can call back.</p>
                             </div>
                             <div class="form-inputs">
@@ -266,7 +266,7 @@
                                     </div>
                                     <div class="rest-of-inputs">
 
-                                        <!-- type iis staying as text for the time being as I want the animation to work how it is I will work on this later when I start linking the form. -->
+                                        <!-- type is staying as text for the time being as I want the animation to work how it is I will work on this later when I start linking the form. -->
                                         <input type="text" name="email" id="email" required>
                                         <label id="emailMover" class="movingLabel" for="email">Email</label>
 
@@ -294,48 +294,47 @@
                 </div>
             </section>
         </div>
+    <!-- Javascript -->
 
-        <!-- Javascript -->
-
-        <script src="js/typed.js"></script>
-        <script>
-        var typed = new Typed('.typed', {
-            strings: [
-                "My Name Is James Binding",
-            ],
-            typeSpeed: 50,
-            showCursor:false,
+    <script src="js/typed.js"></script>
+    <script>
+    var typed = new Typed('.typed', {
+        strings: [
+            "My Name Is James Binding",
+        ],
+        typeSpeed: 50,
+        showCursor:false,
+    });
+    </script>
+    <script>
+        var typed1 = new Typed('.type', {
+            strings: ["I'm a "],
+            startDelay: 2000,
+            backSpeed: 100,
+            typeSpeed: 100,
+            showCursor: false,
         });
-        </script>
-        <script>
-            var typed1 = new Typed('.type', {
-                strings: ["I'm a "],
-                startDelay: 2000,
-                backSpeed: 100,
-                typeSpeed: 100,
-                showCursor: false,
-            });
 
-            var typed2 = new Typed('.type2', {
-                strings: [
-                    "Web Developer ^1000",
-                    "Web Designer ^1000",
-                    "Freelance Web Designer ^1000",
-                    "Computer Programmer ^1000",
-                    "Nerd ^1000",
-                    "Software Engineer ^1000",
-                    "Lead Developer ^1000",
-                ],
-                startDelay:3000,
-                backSpeed: 100,
-                typeSpeed: 100,
-                loop: true,
-                loopCount: Infinity,
+        var typed2 = new Typed('.type2', {
+            strings: [
+                "Web Developer ^1000",
+                "Web Designer ^1000",
+                "Freelance Web Designer ^1000",
+                "Computer Programmer ^1000",
+                "Nerd ^1000",
+                "Software Engineer ^1000",
+                "Lead Developer ^1000",
+            ],
+            startDelay:3000,
+            backSpeed: 100,
+            typeSpeed: 100,
+            loop: true,
+            loopCount: Infinity,
 
-                showCursor: false,
-            });
-            delete typed2.startDelay
-        </script>
+            showCursor: false,
+        });
+        delete typed2.startDelay
+    </script>
 
     </body>
 </html>

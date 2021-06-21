@@ -7,8 +7,12 @@
 
         <link rel="stylesheet" href="../css/styles.css">
 
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.4/raphael-min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/justgage/1.2.9/justgage.min.js"></script>
+
         <script type="text/javascript" src="../js/gauge/raphael.min.js"></script>
         <script type="text/javascript" src="../js/gauge/justgage.js"></script>
+
 
 
 
@@ -224,6 +228,8 @@
 
 
         <script>
+
+
             var g1 = new JustGage({
                 id:"pythonBox",
                 label: "Intermediate",
@@ -253,7 +259,7 @@
 
             var g2 = new JustGage({
                 id:"cssBox",
-                label: "Garbage",
+                label: "Advanced",
                 labelFontColor: "#000000",
                 value: 0,
                 min:0,
@@ -280,7 +286,7 @@
 
             var g3 = new JustGage({
                 id:"htmlBox",
-                label: "average",
+                label: "Advanced",
                 labelFontColor: "#000000",
                 value: 0,
                 min:0,
@@ -309,27 +315,24 @@
             //     g1.refresh(70);
             // });
             document.getElementById('python-hex').addEventListener('mouseover', function() {
-                g1.refresh(70);
+                g1.refresh(60);
             });
 
             // document.getElementById('cssBox').addEventListener('mouseover', function() {
             //     g2.refresh(30);
             // });
             document.getElementById('CSS-hex').addEventListener('mouseover', function() {
-                g2.refresh(30);
+                g2.refresh(80);
             });
 
             // document.getElementById('htmlBox').addEventListener('mouseover', function() {
             //     g3.refresh(50);
             // });
             document.getElementById('HTML-hex').addEventListener('mouseover', function() {
-                g3.refresh(50);
+                g3.refresh(85);
             });
 
         </script>
-
-
-
 
 
         <script src="../js/typed.js"></script>
