@@ -16,6 +16,9 @@
         display: flex;
         position: relative;
         justify-content: space-between;
+        input {
+            margin-right: 0px;
+        }
         .form-name {
             width: 50%;
         }
@@ -50,7 +53,7 @@
     input {
         font-size: 1em;
         margin-bottom: 20px;
-        margin-right: 5px;
+        margin-right: 0px;
         border-radius: 3px;
         border: 1px solid $Black;
         background-color: $White;
@@ -58,6 +61,7 @@
         padding: 10px 10px;
     }
     button {
+        cursor: pointer;
         height: 40px;
         font-size: 1em;
         font-weight: $fontweightbold;
@@ -73,6 +77,9 @@
     }
 }
 
+#firstName {
+    margin-right: 5px;
+}
 // Contact-Form ANIMATION //////////////////////////////////////////////////////////////
 
 input:focus {
@@ -103,6 +110,7 @@ input:valid + #firstNameMover {
     transform: translateY(0px);
     transition-duration: 200ms;
     top: 12px;
+    margin-right: 5px;
 }
 
 input:-webkit-autofill + #lastNameMover,
@@ -128,7 +136,7 @@ input:valid + #lastNameMover {
     transform: translateY(0px);
     transition-duration: 200ms;
     top: 12px;
-    left: 52%;
+    left: 53%;
 }
 
 input:-webkit-autofill + #emailMover,
@@ -213,7 +221,7 @@ select:-webkit-autofill:focus {
     bottom: 0%;
     left: 0%;
     width: 100%;
-    font-size: $FontSizeSmallestDevice;
+    font-size: 15px;
     .up-arrow {
         display: block;
         margin-top: 10px;
@@ -221,6 +229,12 @@ select:-webkit-autofill:focus {
     h3 a{
         margin-top: 0px;
         color: $Black;
+    }
+}
+
+@media (min-width: 420px) {
+    #lastNameMover {
+        left: 52%;
     }
 }
 
@@ -243,10 +257,13 @@ select:-webkit-autofill:focus {
 }
 
 
-@media (min-width:1200px) {
-    .form-inputs {
-    }
-    .contact-description {
-        margin-left: 20px;
-    }
+
+//Javascript
+.error {
+    border-color: $ErrorRed;
+    border: 1px solid $ErrorRed;
+}
+
+.contactlinks {
+    color: $Primary-Color;
 }

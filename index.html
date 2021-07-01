@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" id="HTMLTAG">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width initial-size=1">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
         <link rel="shortcut icon" type="image/x-icon" href="icons/logoBig.png" />
         <link rel="stylesheet" href="css/styles.css">
@@ -15,7 +17,7 @@
 
 <!-- Menu Button -->
 
-        <div class="hamburger">
+        <div class="hamburger" id="BurgerBtn">
             <button type="button" name="button">
                 <span class="sandwich-box">
                     <span class="sandwich"></span>
@@ -26,7 +28,7 @@
         </div>
 
 <!-- Sidebar menu -->
-        <div id="sidebar-menu">
+        <div class="sidebar-menu" id="sidebar-menu">
 
                 <div class="Initials">
                     <a href="index.html">
@@ -39,11 +41,11 @@
 
             <div class="list-compartment">
                     <ul>
-                        <li><a href="#blocks">My Portfolio</a></li>
-                        <li><a href="#contact">Contact Me</a></li>
-                        <li><a href="html/AboutMe.html">About Me</a></li>
-                        <li><a href="html/CodingExamples.html">Coding Examples</a></li>
-                        <li><a href="html/SCSScheme.html">SCS Scheme</a></li>
+                        <li><a href="#blocks" id="portfolioLink">My Portfolio</a></li>
+                        <li><a href="#contact" id="contactMeLink">Contact Me</a></li>
+                        <li><a href="AboutMe.html">About Me</a></li>
+                        <li><a href="CodingExamples.html">Coding Examples</a></li>
+                        <li><a href="SCSScheme.html">SCS Scheme</a></li>
                     </ul>
 
                 <div class="social-media">
@@ -68,11 +70,15 @@
         </div>
 
 <!-- Hero Image panel -->
+        <div id="closeOverlay"></div>
         <div class="body-container">
             <section id="banner-section">
                 <div class="background">
                     <div class="image-con-hero">
-                        <img id="hero-image" src="images/abstractHeroPicture.jpg" alt="Hero Image">
+                        <div id="hero-image1">
+
+                        </div>
+                        <!-- <img id="hero-image" src="images/abstractHeroPicture.jpg" alt="Hero Image"> -->
                         <div class="background-heading">
 
                             <h1 class="typed"></h1>
@@ -88,7 +94,7 @@
 
                             <h3> <a href="#contact"> scroll down </a> </h3>
                             <span class="down-arrow">
-                                <img src="icons/arrow-down.svg" alt="down arrow">
+                                <a href="#contact"><img src="icons/angle-down-solid.svg" alt="down arrow"></a>
                             </span>
 
                         </div>
@@ -105,7 +111,10 @@
                             <div class="block-con" id="first-block">
                                 <a href="http://netmatters.james-binding.netmatters-scs.co.uk/" target="_blank">
                                     <div class="image-con">
-                                        <img class="project-images" src="images/netmatters.jpg" alt="Project One Image">
+                                        <div class="project-images blockimg" id="blockimg1">
+
+                                        </div>
+                                        <!-- <img class="project-images" src="images/netmatters.jpg" alt="Project One Image"> -->
                                         <span class="gradient"></span>
                                         <h3 class="project-heading">Netmatters Replica</h3>
                                         <p class="project-coding-description">
@@ -130,11 +139,21 @@
                             </div>
 
                             <div class="block-con">
-                                <a href="#">
+                                <a href="https://c37pjy.axshare.com/" target="_blank">
                                     <div class="image-con">
-                                        <img class="project-images" src="images/Placeholder.jpg" alt="Project One Image">
+                                        <div class="project-images blockimg" id="blockimg2">
+
+                                        </div>
+                                        <!-- <img class="project-images" src="images/axure.jpg" alt="Project One Image"> -->
                                         <span class="gradient"></span>
-                                        <h3 class="project-heading">Coming Soon...</h3>
+                                        <h3 class="project-heading">Axure Mock Up</h3>
+                                        <p class="project-coding-description">
+                                            This is a mock up
+                                            <br>
+                                            guitar store made
+                                            <br>
+                                            for mobiles.
+                                        </p>
                                     </div>
                                     <div class="project-cap">
                                         <h3>Project Two</h3>
@@ -250,12 +269,12 @@
                             <div class="contact-description">
                                 <h1>Get In Touch</h1>
                                 <p> To get in touch with me use the mobile number or the email below.</p>
-                                <a href="tel: 07542636156"><h3>07542636156</h3></a>
-                                <a href="mailto: Jbinding195@gmail.com"><h3>Jbinding195@gmail.com</h3></a>
+                                <h3><a href="tel:07542636156" class="contactlinks">07542636156</a></h3>
+                                <h3><a href="mailto:Jbinding195@gmail.com" class="contactlinks">Jbinding195@gmail.com</a></h3>
                                 <p>If you are sending an email, I will get back to you within 24 hours. If you are calling and I do not pick up. Please leave a message with a contact number where I can call back.</p>
                             </div>
                             <div class="form-inputs">
-                                <form class="contact-us" action="index.html" method="post">
+                                <form name="myForm" class="contact-us" action="index.html" method="post">
                                     <div class="split-input">
 
                                         <input class="form-name" type="text" name="firstName" id="firstName" required>
@@ -278,7 +297,7 @@
                                         <label id="messageMover" class="movingLabel" for="message">Message</label>
                                     </div>
 
-                                    <button type="button" name="button">Submit</button>
+                                    <button type="button" name="button" id="submitFormBtn">Submit</button>
                                 </form>
                             </div>
                         </div>
@@ -287,7 +306,7 @@
                 <div class="scroll-up">
 
                         <span class="up-arrow">
-                            <img src="icons/arrow-up.svg" alt="up arrow">
+                            <a href="#"><img src="icons/chevron-up-solid.svg" alt="up arrow"></a>
                         </span>
                         <h3><a href="#"> Scroll up </a></h3>
 
@@ -295,6 +314,8 @@
             </section>
         </div>
     <!-- Javascript -->
+    <script src="js/menuslider/menuslider.js" charset="utf-8"></script>
+    <script src="dist/validateForm-dist.js" charset="utf-8"></script>
 
     <script src="js/typed.js"></script>
     <script>

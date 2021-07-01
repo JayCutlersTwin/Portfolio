@@ -1,3 +1,8 @@
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: arial;
   margin: 0px;
@@ -29,19 +34,25 @@ a {
   margin-right: 20px;
 }
 
-@media (min-width: 768px) {
-  .body-container {
-    margin-left: 203px;
-  }
+.body-container {
+  transform: translateX(0px);
+  transition: all 0.3s;
 }
+
+.noScroll {
+  overflow-y: hidden;
+}
+
 .hamburger {
-  position: absolute;
+  position: fixed;
+  z-index: 1;
   top: 2%;
   left: 5%;
-  z-index: 1;
+  transition: all 0.3s;
 }
 
 .hamburger button {
+  cursor: pointer;
   width: 50px;
   height: 50px;
   background-color: #FFFFFF;
@@ -72,16 +83,21 @@ span .sandwich {
   background-color: #FFFFFF;
 }
 
-@media (min-width: 768px) {
-  .hamburger {
-    display: none;
-  }
+.moveBurgerBtnRight {
+  left: 223px;
+  transition: all 0.3s;
 }
-#sidebar-menu {
+
+.sidebar-menu {
   position: fixed;
   width: 200px;
   height: 100vh;
   border-right: 3px solid #023b45;
+  top: 0px;
+  z-index: 1;
+  transform: translateX(-203px);
+  transition: all 0.3s;
+  overflow: auto;
 }
 
 .Initials {
@@ -143,6 +159,7 @@ span .sandwich {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  margin-bottom: 10px;
 }
 
 .icon-block-container {
@@ -207,11 +224,6 @@ span .sandwich {
   transition-duration: 0.5s;
 }
 
-@media (max-width: 767px) {
-  #sidebar-menu {
-    display: none;
-  }
-}
 @media screen and (orientation: landscape) {
   .initials {
     display: none;
@@ -221,6 +233,31 @@ span .sandwich {
     height: 100vh;
   }
 }
+.shiftRight {
+  transform: translateX(0px);
+  transition: all 0.3s;
+}
+
+.shiftBodyRight {
+  transform: translateX(203px);
+  transition: all 0.3s;
+}
+
+.closingOverlay {
+  cursor: pointer;
+  position: fixed;
+  display: block;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  z-index: 2;
+  left: 0px;
+  top: 0px;
+  transform: translateX(203px);
+  transition: all 0.3s;
+}
+
 .typed-cursor {
   font-weight: 600;
   font-size: 1.5em;
@@ -237,6 +274,7 @@ span .sandwich {
 .image-con-hero {
   position: relative;
   overflow: hidden;
+  height: 100vh;
 }
 
 #hero-image {
@@ -326,19 +364,31 @@ span .sandwich {
     font-size: 1.725em;
   }
 }
+@media (min-width: 1200px) {
+  #hero-image {
+    width: 100%;
+  }
+}
 @media (min-width: 1417px) {
   #hero-image {
     width: 100%;
   }
 }
-@media screen and (orientation: landscape) {
+@media (max-width: 823px) and (max-height: 414px) {
   #hero-image {
-    width: 100vw;
+    height: 200vh;
   }
 }
+#hero-image1 {
+  display: block;
+  background-image: url("../images/abstractHeroPicture.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
 .block-con {
   margin-top: 20px;
-  margin-left: 10px;
 }
 
 .block-heading-and-arrow {
@@ -365,6 +415,7 @@ span .sandwich {
   transform: scale(1);
   transition: transform 0.4s ease;
   display: block;
+  height: 200px;
 }
 .image-con .project-heading {
   display: block;
@@ -377,8 +428,9 @@ span .sandwich {
   transform: translateX(0px);
   transition-duration: 0.4s;
   transition-timing-function: ease-in-out;
-  text-shadow: 7px 7px 10px #000000;
+  text-shadow: 1px 1px 5px #000000;
   width: 45%;
+  font-weight: bold;
 }
 .image-con .project-coding-languages {
   display: block;
@@ -390,11 +442,13 @@ span .sandwich {
   transform: translateX(0px);
   transition-duration: 0.4s;
   transition-timing-function: ease-in-out;
-  text-shadow: 7px 7px 10px #000000;
+  text-shadow: 1px 1px 5px #000000;
   width: 45%;
+  font-weight: bold;
 }
 .image-con .project-coding-description {
   display: block;
+  font-weight: bold;
   position: absolute;
   text-decoration: none;
   color: #FFFFFF;
@@ -403,7 +457,7 @@ span .sandwich {
   transform: translateX(0px);
   transition-duration: 0.4s;
   transition-timing-function: ease-in-out;
-  text-shadow: 7px 7px 10px #000000;
+  text-shadow: 1px 1px 5px #000000;
   width: 45%;
 }
 
@@ -484,21 +538,49 @@ span .sandwich {
   }
 
   .block-con {
-    width: 49.5%;
+    width: 33.33%;
     display: inline-block;
+    margin-left: 10px;
+  }
+
+  #first-block,
+#fourth-block {
+    margin-left: 0px;
   }
 }
 @media (min-width: 1200px) {
-  #first-block,
-#fourth-block {
-    margin-left: 20px;
-  }
-
   .block-con {
-    width: 33%;
+    width: 33.33%;
     display: inline-block;
   }
 }
+@media (min-width: 750px) and (max-width: 991px) {
+  .image-con .project-coding-description {
+    right: -430px;
+  }
+}
+@media (min-width: 750px) and (max-width: 991px) {
+  .image-con .project-coding-languages {
+    right: -430px;
+  }
+}
+.blockimg {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#blockimg1 {
+  background-image: url(../images/netmatters.jpg);
+}
+
+#blockimg2 {
+  background-image: url(../images/axure.jpg);
+}
+
+#codingblock1 {
+  background-image: url(../images/codingExamples/example1/hex-body.jpg);
+}
+
 .contact-description {
   letter-spacing: 1px;
   display: inline-flex;
@@ -517,6 +599,9 @@ span .sandwich {
   display: flex;
   position: relative;
   justify-content: space-between;
+}
+.contact-us .split-input input {
+  margin-right: 0px;
 }
 .contact-us .split-input .form-name {
   width: 50%;
@@ -550,7 +635,7 @@ span .sandwich {
 .contact-us input {
   font-size: 1em;
   margin-bottom: 20px;
-  margin-right: 5px;
+  margin-right: 0px;
   border-radius: 3px;
   border: 1px solid #000000;
   background-color: #FFFFFF;
@@ -558,6 +643,7 @@ span .sandwich {
   padding: 10px 10px;
 }
 .contact-us button {
+  cursor: pointer;
   height: 40px;
   font-size: 1em;
   font-weight: 600;
@@ -570,6 +656,10 @@ span .sandwich {
 .contact-us button:hover {
   background-color: #023b45;
   color: #FFFFFF;
+}
+
+#firstName {
+  margin-right: 5px;
 }
 
 input:focus {
@@ -602,6 +692,7 @@ input:valid + #firstNameMover {
   transform: translateY(0px);
   transition-duration: 200ms;
   top: 12px;
+  margin-right: 5px;
 }
 
 input:-webkit-autofill + #lastNameMover,
@@ -630,7 +721,7 @@ input:valid + #lastNameMover {
   transform: translateY(0px);
   transition-duration: 200ms;
   top: 12px;
-  left: 52%;
+  left: 53%;
 }
 
 input:-webkit-autofill + #emailMover,
@@ -721,7 +812,7 @@ select:-webkit-autofill:focus {
   bottom: 0%;
   left: 0%;
   width: 100%;
-  font-size: 0.8125rem;
+  font-size: 15px;
 }
 .scroll-up .up-arrow {
   display: block;
@@ -732,6 +823,11 @@ select:-webkit-autofill:focus {
   color: #000000;
 }
 
+@media (min-width: 420px) {
+  #lastNameMover {
+    left: 52%;
+  }
+}
 @media (min-width: 992px) {
   .contact-container {
     display: flex;
@@ -750,11 +846,15 @@ select:-webkit-autofill:focus {
     width: 50%;
   }
 }
-@media (min-width: 1200px) {
-  .contact-description {
-    margin-left: 20px;
-  }
+.error {
+  border-color: #FF0000;
+  border: 1px solid #FF0000;
 }
+
+.contactlinks {
+  color: #023b45;
+}
+
 .AboutMe-container {
   padding: 0px 0px;
   display: block;

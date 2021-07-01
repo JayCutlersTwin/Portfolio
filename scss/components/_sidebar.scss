@@ -1,10 +1,15 @@
 @use '../abstracts' as *;
 
-#sidebar-menu {
+.sidebar-menu {
     position: fixed;
     width: 200px;
     height: 100vh;
     border-right: 3px solid $Primary-Color;
+    top: 0px;
+    z-index: 1;
+    transform: translateX(-203px);
+    transition: all .3s;
+    overflow: auto;
 }
 
 //Initials
@@ -76,6 +81,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    margin-bottom: 10px;
 }
 
 .icon-block-container {
@@ -143,11 +149,11 @@
 
 //Media
 
-@media (max-width:767px) {
-    #sidebar-menu {
-        display: none;
-    }
-}
+// @media (max-width:767px) {
+//     #sidebar-menu {
+//         display: none;
+//     }
+// }
 
 @media screen and (orientation: landscape) {
     .initials {
@@ -156,4 +162,33 @@
     #sidebar-menu {
         height: 100vh;
     }
+}
+
+
+
+//javascript
+
+.shiftRight {
+    transform: translateX(0px);
+    transition: all .3s;
+}
+
+.shiftBodyRight {
+    transform: translateX(203px);
+    transition: all .3s;
+}
+
+.closingOverlay {
+    cursor: pointer;
+    position: fixed;
+    display: block;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    z-index: 2;
+    left: 0px;
+    top: 0px;
+    transform: translateX(203px);
+    transition: all .3s;
 }

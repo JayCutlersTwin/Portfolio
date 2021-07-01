@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" id="HTMLTAG">
     <head>
-        <link rel="shortcut icon" type="image/x-icon" href="../icons/logoBig.png" />
+        <link rel="shortcut icon" type="image/x-icon" href="icons/logoBig.png" />
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width initial-size=1">
 
-        <link rel="stylesheet" href="../css/styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="css/styles.css">
 
         <title>James Binding</title>
     </head>
@@ -13,7 +15,7 @@
     <body class="preload">
         <script type="text/javascript">document.body.classList.remove('preload')</script>
 <!-- Menu Button -->
-        <div class="hamburger">
+        <div class="hamburger" id="BurgerBtn">
             <button type="button" name="button">
                 <span class="sandwich-box">
                     <span class="sandwich"></span>
@@ -24,10 +26,10 @@
         </div>
 
 <!-- Sidebar menu -->
-        <div id="sidebar-menu">
+        <div class="sidebar-menu" id="sidebar-menu">
 
             <div class="Initials">
-                <a href="../index.html">
+                <a href="index.html">
                     <div class="JB">
                         <span> JB </span>
                     </div>
@@ -36,8 +38,8 @@
 
             <div class="list-compartment">
                 <ul>
-                    <li><a href="../index.html#blocks">My Portfolio</a></li>
-                    <li><a href="../index.html#contact">Contact Me</a></li>
+                    <li><a href="index.html#blocks" id="portfolioLink">My Portfolio</a></li>
+                    <li><a href="index.html#contact" id="contactMeLink">Contact Me</a></li>
                     <li><a href="AboutMe.html">About Me</a></li>
                     <li><a href="CodingExamples.html">Coding Examples</a></li>
                     <li><a href="SCSScheme.html">SCS Scheme</a></li>
@@ -47,16 +49,16 @@
                     <div class="icon-block-container">
                         <a target="_blank" href="https://www.linkedin.com/in/james-binding-123abc">
                             <span class="icon-block" id="LinkedIn">
-                                <img class="hidden-icon" src="../icons/linkedin.svg" alt="LinkedIn">
-                                <img class="showing-icon" src="../icons/linkedin.svg" alt="LinkedIn">
+                                <img class="hidden-icon" src="icons/linkedin.svg" alt="LinkedIn">
+                                <img class="showing-icon" src="icons/linkedin.svg" alt="LinkedIn">
                             </span>
                         </a>
                     </div>
                     <div class="icon-block-container">
                         <a target="_blank" href="https://github.com/JayCutlersTwin">
                             <span class="icon-block" id="Github">
-                                <img class="hidden-icon" src="../icons/github.svg" alt="Github">
-                                <img class="showing-icon" src="../icons/github.svg" alt="Github">
+                                <img class="hidden-icon" src="icons/github.svg" alt="Github">
+                                <img class="showing-icon" src="icons/github.svg" alt="Github">
                             </span>
                         </a>
                     </div>
@@ -65,11 +67,15 @@
         </div>
 
 <!-- Hero Image panel -->
+        <div id="closeOverlay"></div>
         <div class="body-container">
             <section id="banner-section">
                 <div class="background">
                     <div class="image-con-hero">
-                        <img id="hero-image" src="../images/abstractHeroPicture.jpg" alt="Hero Image">
+                        <div id="hero-image1">
+
+                        </div>
+                        <!-- <img id="hero-image" src="images/abstractHeroPicture.jpg" alt="Hero Image"> -->
                         <div class="background-heading">
                             <h1 class="typed"></h1>
                             <!-- <h3>I'm a Web Developer</h3> -->
@@ -78,7 +84,7 @@
 
                             <h3> <a href="#blocks">scroll down </a></h3>
                             <span class="down-arrow">
-                                <img src="../icons/arrow-down.svg" alt="down arrow">
+                                <a href="#blocks"><img src="icons/angle-down-solid.svg" alt="down arrow"></a>
                             </span>
 
                         </div>
@@ -94,11 +100,18 @@
                         <div class="TrioBlock">
 
                             <div class="block-con" id="first-block">
-                                <a href="codingExamples/codeExampleOne.html">
+                                <a href="codeExampleOne.html">
                                     <div class="image-con">
-                                        <img class="project-images" src="../images/codingExamples/example1/hex-body.jpg" alt="Project One Image">
+                                        <div class="project-images blockimg" id="codingblock1">
+
+                                        </div>
+                                        <!-- <img class="project-images" src="images/codingExamples/example1/hex-body.jpg" alt="Project One Image"> -->
                                         <span class="gradient"></span>
-                                        <h3 class="project-heading">Portfolio Coding Example</h3>
+                                        <h3 class="project-heading">
+                                            Portfolio Coding
+                                            <br>
+                                            Example
+                                        </h3>
                                         <p class="project-coding-languages">
                                             Languages used:
                                             <br>
@@ -123,7 +136,7 @@
                             <div class="block-con">
                                 <a href="#">
                                     <div class="image-con">
-                                        <img class="project-images" src="../images/Placeholder.jpg" alt="Project One Image">
+                                        <img class="project-images" src="images/Placeholder.jpg" alt="Project One Image">
                                         <span class="gradient"></span>
                                         <h3 class="project-heading">Coming Soon...</h3>
                                     </div>
@@ -131,7 +144,7 @@
                                         <h3>Coding Example 2</h3>
                                         <div class="block-heading-and-arrow">
                                             <!-- <h6>View Code </h6>
-                                            <span><img src="../icons/arrow-right.svg" alt=" Right arrow"></span> -->
+                                            <span><img src="icons/arrow-right.svg" alt=" Right arrow"></span> -->
 
                                             <h6>Coming soon... </h6> <!-- delete Once I can fill -->
                                             <span>
@@ -148,7 +161,7 @@
                             <div class="block-con">
                                 <a href="#">
                                     <div class="image-con">
-                                        <img class="project-images" src="../images/Placeholder.jpg" alt="Project One Image">
+                                        <img class="project-images" src="images/Placeholder.jpg" alt="Project One Image">
                                         <span class="gradient"></span>
                                         <h3 class="project-heading">Coming Soon...</h3>
                                     </div>
@@ -156,7 +169,7 @@
                                         <h3>Coding Example 3</h3>
                                         <div class="block-heading-and-arrow">
                                             <!-- <h6>View Code </h6>
-                                            <span><img src="../icons/arrow-right.svg" alt=" Right arrow"></span> -->
+                                            <span><img src="icons/arrow-right.svg" alt=" Right arrow"></span> -->
 
                                             <h6>Coming soon... </h6> <!-- delete Once I can fill -->
                                             <span>
@@ -176,7 +189,7 @@
                             <div class="block-con" id="fourth-block">
                                 <a href="#">
                                     <div class="image-con">
-                                        <img class="project-images" src="../images/Placeholder.jpg" alt="Project One Image">
+                                        <img class="project-images" src="images/Placeholder.jpg" alt="Project One Image">
                                         <span class="gradient"></span>
                                         <h3 class="project-heading">Coming Soon...</h3>
                                     </div>
@@ -184,7 +197,7 @@
                                         <h3>Coding Example 4</h3>
                                         <div class="block-heading-and-arrow">
                                             <!-- <h6>View Code </h6>
-                                            <span><img src="../icons/arrow-right.svg" alt=" Right arrow"></span> -->
+                                            <span><img src="icons/arrow-right.svg" alt=" Right arrow"></span> -->
 
                                             <h6>Coming soon... </h6> <!-- delete Once I can fill -->
                                             <span>
@@ -200,7 +213,7 @@
                             <div class="block-con">
                                 <a href="#">
                                     <div class="image-con">
-                                        <img class="project-images" src="../images/Placeholder.jpg" alt="Project One Image">
+                                        <img class="project-images" src="images/Placeholder.jpg" alt="Project One Image">
                                         <span class="gradient"></span>
                                         <h3 class="project-heading">Coming Soon...</h3>
                                     </div>
@@ -208,7 +221,7 @@
                                         <h3>Coding Example 5</h3>
                                         <div class="block-heading-and-arrow">
                                             <!-- <h6>View Code </h6>
-                                            <span><img src="../icons/arrow-right.svg" alt=" Right arrow"></span> -->
+                                            <span><img src="icons/arrow-right.svg" alt=" Right arrow"></span> -->
 
                                             <h6>Coming soon... </h6> <!-- delete Once I can fill -->
                                             <span>
@@ -224,7 +237,7 @@
                             <div class="block-con">
                                 <a href="#">
                                     <div class="image-con">
-                                        <img class="project-images" src="../images/Placeholder.jpg" alt="Project One Image">
+                                        <img class="project-images" src="images/Placeholder.jpg" alt="Project One Image">
                                         <span class="gradient"></span>
                                         <h3 class="project-heading">Coming Soon...</h3>
                                     </div>
@@ -232,7 +245,7 @@
                                         <h3>Coding Example 6</h3>
                                         <div class="block-heading-and-arrow">
                                             <!-- <h6>View Code</h6>
-                                            <span><img src="../icons/arrow-right.svg" alt=" Right arrow"></span> -->
+                                            <span><img src="icons/arrow-right.svg" alt=" Right arrow"></span> -->
 
                                             <h6>Coming soon... </h6> <!-- delete Once I can fill -->
                                             <span>
@@ -256,7 +269,7 @@
                 <div class="scroll-up">
 
                         <span class="up-arrow">
-                            <img src="../icons/arrow-up.svg" alt="up arrow">
+                            <a href="#"><img src="icons/chevron-up-solid.svg" alt="up arrow"></a>
                         </span>
                         <h3><a href="#"> Scroll up </a></h3>
 
@@ -265,8 +278,9 @@
         </div>
 
         <!-- Javascript -->
+        <script src="js/menuslider/menuslider.js" charset="utf-8"></script>
 
-        <script src="../js/typed.js"></script>
+        <script src="js/typed.js"></script>
         <script>
         var typed = new Typed('.typed', {
             strings: [

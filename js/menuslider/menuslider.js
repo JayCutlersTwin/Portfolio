@@ -1,0 +1,23 @@
+
+
+function openMenu() {
+    $('#sidebar-menu').addClass("shiftRight");
+    $('.body-container').addClass("shiftBodyRight");
+    $('#closeOverlay').addClass("closingOverlay");
+    $('#BurgerBtn').addClass("moveBurgerBtnRight");
+    $('#HTMLTAG').addClass("noScroll");
+}
+function closeMenu() {
+    if ($('.body-container').hasClass("shiftBodyRight")) {
+        $('#sidebar-menu').removeClass("shiftRight");
+        $('.body-container').removeClass("shiftBodyRight");
+        $('#closeOverlay').removeClass("closingOverlay");
+        $('#BurgerBtn').removeClass("moveBurgerBtnRight");
+        $('#HTMLTAG').removeClass("noScroll");
+    }
+}
+
+$('#closeOverlay').click(closeMenu);
+$('#portfolioLink').click(closeMenu);
+$('#contactMeLink').click(closeMenu);
+$('#BurgerBtn').click(openMenu);

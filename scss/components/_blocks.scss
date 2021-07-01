@@ -2,7 +2,6 @@
 
 .block-con {
     margin-top: 20px;
-    margin-left: 10px;
 }
 
 
@@ -29,6 +28,7 @@
         transform: scale(1);
         transition: transform .4s ease;
         display: block;
+        height: 200px;
     }
     .project-heading {
         display: block;
@@ -41,8 +41,10 @@
         transform: translateX(0px);
         transition-duration: .4s;
         transition-timing-function: ease-in-out;
-        text-shadow: 7px 7px 10px $Black;
+        // text-shadow: 7px 7px 10px $Black;
+        text-shadow: 1px 1px 5px $Black;
         width: 45%;
+        font-weight: bold;
     }
 
     //Coding Examples Card Languages
@@ -56,12 +58,15 @@
         transform: translateX(0px);
         transition-duration: .4s;
         transition-timing-function: ease-in-out;
-        text-shadow: 7px 7px 10px $Black;
+        // text-shadow: 7px 7px 10px $Black;
+        text-shadow: 1px 1px 5px $Black;
         width: 45%;
+        font-weight: bold;
     }
     //Portfolio Card Description
     .project-coding-description {
         display: block;
+        font-weight: bold;
         position: absolute;
         text-decoration: none;
         color: $White;
@@ -70,7 +75,8 @@
         transform: translateX(0px);
         transition-duration: .4s;
         transition-timing-function: ease-in-out;
-        text-shadow: 7px 7px 10px $Black;
+        // text-shadow: 7px 7px 10px $Black;
+        text-shadow: 1px 1px 5px $Black;
         width: 45%;
     }
 }
@@ -157,18 +163,50 @@
         text-align: center;
     }
     .block-con {
-        width: 49.5%;
+        width: 33.33%;
         display:inline-block;
+        margin-left: 10px;
+    }
+    #first-block,
+    #fourth-block {
+        margin-left: 0px;
     }
 }
 
 @media (min-width:1200px) {
-    #first-block,
-    #fourth-block {
-        margin-left: 20px;
-    }
     .block-con {
-        width: 33%;
+        width: 33.33%;
         display:inline-block;
     }
+}
+
+
+@media (min-width: 750px) and (max-width:991px) {
+    .image-con .project-coding-description {
+        right: -430px;
+    }
+}
+
+@media (min-width: 750px) and (max-width:991px) {
+    .image-con .project-coding-languages {
+        right: -430px;
+    }
+}
+
+
+.blockimg {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+// portfolio examples
+#blockimg1{
+    background-image: url(../images/netmatters.jpg);
+}
+#blockimg2 {
+    background-image: url(../images/axure.jpg);
+}
+
+//Coding examples
+#codingblock1 {
+    background-image: url(../images/codingExamples/example1/hex-body.jpg);
 }
