@@ -504,7 +504,7 @@ span .sandwich {
   display: block;
   position: absolute;
   background-image: linear-gradient(to left, black, black);
-  opacity: 0.3;
+  opacity: 0.6;
   height: 100%;
   width: 100%;
   top: 0%;
