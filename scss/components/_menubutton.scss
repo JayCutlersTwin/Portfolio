@@ -17,27 +17,60 @@
     border: none;
 
     .sandwich-box {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        span {
+        display: block;
+        position: relative;
+        height: 50px;
+        .sandwich {
             display: block;
-            margin-bottom: 5px;
-            width: 23px;
+            position: absolute;
+            width: 28px;
             height: 3px;
             background-color: $Primary-Color;
+            top: calc(50% - (3px / 2));
+            left: calc((50% - (28px / 2)));
+            &::before{
+                content: "";
+                display: block;
+                position: absolute;
+                transform: translateY(8px);
+                background-color: $Primary-Color;
+                height: 3px;
+                width: 28px;
+                transition: all .2s;
+            }
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                transform: translateY(-8px);
+                background-color: $Primary-Color;
+                height: 3px;
+                width: 28px;
+                transition: all .2s;
+            }
+        }
+        .beforeAnimate::before {
+            transform-origin: center;
+            transform: translateY(0px);
+            transform: rotate(-45deg);
+            transition: all .2s;
+        }
+
+        .innerAnimate {
+            background-color: transparent;
+            transition: all .2s;
+        }
+
+        .afterAnimate::after {
+            transform-origin: center;
+            transform: translateY(0px);
+            transform: rotate(45deg);
+            transition: all .2s;
         }
     }
 }
 .hamburger button:hover {
     background-color: $LightSteelBlue;
-}
-
-span .sandwich {
-    width: 23px;
-    height: 3px;
-    background-color: $White;
 }
 
 //Media

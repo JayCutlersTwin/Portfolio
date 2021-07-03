@@ -14,10 +14,20 @@ function closeMenu() {
         $('#closeOverlay').removeClass("closingOverlay");
         $('#BurgerBtn').removeClass("moveBurgerBtnRight");
         $('#HTMLTAG').removeClass("noScroll");
+        $('.sandwich').removeClass("innerAnimate");
+        $('.sandwich').removeClass("beforeAnimate");
+        $('.sandwich').removeClass("afterAnimate");
     }
+}
+
+function animateBurger() {
+    $('.sandwich').addClass("innerAnimate");
+    $('.sandwich').addClass("beforeAnimate");
+    $('.sandwich').addClass("afterAnimate");
 }
 
 $('#closeOverlay').click(closeMenu);
 $('#portfolioLink').click(closeMenu);
 $('#contactMeLink').click(closeMenu);
 $('#BurgerBtn').click(openMenu);
+$('#BurgerBtn').click(animateBurger);
