@@ -43,7 +43,6 @@ function validateLastNameForm() {
         console.log("No Last Name input value");
     } else {
         lNIn.style.borderColor = "black";
-        console.log("ln = black")
     }
 }
 submitBtn.addEventListener("click", validateLastNameForm);
@@ -60,31 +59,39 @@ lNIn.addEventListener("input", function(){
 });
 
 // Email submit Changes
-const emIn = document.getElementById("email");
+const emIn = document.getElementById('email');
 
-function validateEmailForm() {
+function checkIfValidEmail(email) {
+    const re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    return re.test(email);
+}
 
-    var emailVal = document.forms["myForm"]["email"].value;
+function validateEmail() {
+    const email = document.getElementById("email").value;
 
-    if (emailVal == "" || emailVal == null || emailVal == " ") {
+    if (checkIfValidEmail(email)) {
+        emIn.style.borderColor = "black";
+    } else {
         emIn.style.borderColor = "red";
         console.log("No Email input value");
-    } else {
-        emIn.style.borderColor = "black";
     }
 }
-submitBtn.addEventListener("click", validateEmailForm);
+submitBtn.addEventListener("click", validateEmail);
 
 // Email Input Changes
-emIn.addEventListener("input", function(){
-    var emChangeVal = document.forms["myForm"]["email"].value;
 
-    if (emChangeVal == "" || emChangeVal == " ") {
-        emIn.style.borderColor = "red";
-    } else {
+function emailChange() {
+    const email = document.getElementById("email").value;
+
+    if (checkIfValidEmail(email)) {
         emIn.style.borderColor = "black";
+        console.log("Valid Email");
+    } else {
+        emIn.style.borderColor = "red";
+        console.log("Not a Valid Email");
     }
-});
+}
+emIn.addEventListener("input", emailChange);
 
 // Subject Submit Changes
 const sbIn = document.getElementById("subject");
