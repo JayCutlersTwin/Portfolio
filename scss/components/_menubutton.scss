@@ -6,6 +6,7 @@
     top: 2%;
     left: 5%;
     transition: all .3s;
+    height: 50px;
 }
 
 .hamburger button{
@@ -20,6 +21,7 @@
         display: block;
         position: relative;
         height: 50px;
+        top: -1px;
         .sandwich {
             display: block;
             position: absolute;
