@@ -50,10 +50,11 @@
     a span {
         margin: 20px 0px;
         padding: 10px;
-        background-color: $Primary-Color;
+        background-color: $NeonGreen;
+        line-height: 47px;
         color: $White;
         border-radius: 3px;
-        border: 1px solid $White;
+        border: 1px solid $NeonGreen;
         font-size: 1.5em;
     }
 }
