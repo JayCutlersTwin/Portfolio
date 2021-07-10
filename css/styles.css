@@ -64,7 +64,7 @@ a {
   display: block;
   position: relative;
   height: 50px;
-  top: -1px;
+  top: -2px;
 }
 .hamburger button .sandwich-box .sandwich {
   display: block;
@@ -614,6 +614,10 @@ a {
   background-image: url(../images/codingExamples/example1/hex-body.jpg);
 }
 
+#codingblock2 {
+  background-image: url(../images/codingExamples/example2/large-code.jpg);
+}
+
 .contact-description {
   letter-spacing: 1px;
   display: inline-flex;
@@ -1039,7 +1043,7 @@ select:-webkit-autofill:focus {
   text-align: center;
 }
 .qualifications .qual-lists ul li {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .technical-skills h3 {
@@ -1062,7 +1066,8 @@ select:-webkit-autofill:focus {
 }
 .technical-skills .programming-languages ul li,
 .technical-skills .frameworks ul li {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  min-height: 18px;
 }
 
 .tech-lists {

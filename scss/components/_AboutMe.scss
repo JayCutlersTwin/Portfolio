@@ -257,7 +257,7 @@
             width: 33%;
             text-align: center;
             li {
-                margin-bottom: 5px;
+                margin-bottom: 10px;
             }
         }
     }
@@ -279,7 +279,8 @@
             list-style: none;
             padding-left: 0px;
             li {
-                margin-bottom: 5px;
+                margin-bottom: 10px;
+                min-height: 18px;
             }
         }
     }

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" id="HTMLTAG">
+    <head>
+        <link rel="shortcut icon" type="image/x-icon" href="icons/logoBig.png" />
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="css/styles.css">
+
+        <title>James Binding</title>
+    </head>
+
+    <body class="preload">
+        <script type="text/javascript">document.body.classList.remove('preload')</script>
+<!-- Menu Button -->
+        <div class="hamburger" id="BurgerBtn">
+            <button type="button" name="button">
+                <span class="sandwich-box">
+                    <span class="sandwich"></span>
+                </span>
+            </button>
+        </div>
+
+<!-- Sidebar menu -->
+        <div class="sidebar-menu" id="sidebar-menu">
+
+            <div class="Initials">
+                <a href="index.html">
+                    <div class="JB">
+                        <span> JB </span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="list-compartment">
+                <ul>
+                    <li><a href="index.html#blocks" id="portfolioLink">My Portfolio</a></li>
+                    <li><a href="index.html#contact" id="contactMeLink">Contact Me</a></li>
+                    <li><a href="AboutMe.html">About Me</a></li>
+                    <li><a href="CodingExamples.html">Coding Examples</a></li>
+                    <li><a href="SCSScheme.html">SCS Scheme</a></li>
+                </ul>
+
+                <div class="social-media">
+                    <div class="icon-block-container">
+                        <a target="_blank" href="https://www.linkedin.com/in/james-binding-123abc">
+                            <span class="icon-block" id="LinkedIn">
+                                <img class="hidden-icon" src="icons/linkedin.svg" alt="LinkedIn">
+                                <img class="showing-icon" src="icons/linkedin.svg" alt="LinkedIn">
+                            </span>
+                        </a>
+                    </div>
+                    <div class="icon-block-container">
+                        <a target="_blank" href="https://github.com/JayCutlersTwin">
+                            <span class="icon-block" id="Github">
+                                <img class="hidden-icon" src="icons/github.svg" alt="Github">
+                                <img class="showing-icon" src="icons/github.svg" alt="Github">
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!-- Hero Image panel -->
+        <div id="closeOverlay"></div>
+        <div class="body-container">
+            <section id="banner-section">
+                <div class="background">
+                    <div class="image-con-hero">
+                        <div id="hero-image1">
+
+                        </div>
+                        <!-- <img id="hero-image" src="images/abstractHeroPicture.jpg" alt="Hero Image"> -->
+                        <div class="background-heading">
+                                <h1 class="typed"></h1>
+                                <!-- <h3>I'm a Web Developer</h3> -->
+                        </div>
+                        <div class="scroll-down">
+
+                                <h3><a href="#codingExample-section"> scroll down </a></h3>
+                                <span class="down-arrow">
+                                    <a href="#codingExample-section"><img src="icons/angle-down-solid.svg" alt="down arrow"></a>
+                                </span>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="codingExample-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="codingExample-container">
+
+                            <h1 class="container-title"> Portfolio Coding Example</h1>
+                            <div>
+                                <div class="codingExample-small-container">
+                                    <h3>SQL Coding Example</h3>
+
+                                    <div class="codingExample-imageAndCaption-container">
+                                        <div class="codingExample-image">
+                                            <img src="images/codingExamples/example2/movie-database.png" alt="Code from the hex body">
+                                        </div>
+
+                                        <div class="codingExample-Caption">
+                                            <h5>SQL Query</h5>
+                                            <p>
+                                                The Query example is to find one genre of movie where they are rated from highest to lowest.
+                                            </p>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="codingExample-imageAndCaption-container" id="codingExample-imageAndCaption-container-middle">
+
+                                        <div class="codingExample-image">
+                                            <img src="images/codingExamples/example2/large-code.jpg" alt="SQL QUERY">
+                                        </div>
+
+                                        <div class="codingExample-Caption">
+                                            <h5>Getting the correct table</h5>
+                                            <p>
+                                                First of all I used the "SELECT" keyword to select the columns I wanted. AS was used to
+                                                rename the columns. I then used the keyword "FROM" to get the columns from the tables I needed.
+                                                I used the "FULL JOIN", selected the table and linked them together with the primary key "mov_id".
+                                                I then used "WHERE" so I could create a sub query and link through the movie genres table to get to the genres table.
+                                                This is where I was able to specify the genres I wanted to see.
+                                                <br>
+                                                <br>
+                                                The code I have written will show all the movies that are rated in the "Drama" genre. Three of which returns NULL.
+                                                Unfortunely the tables didnt have to many stored rated movies for each genre. I would of entered more but I do not have the authorization.
+                                                To do this I would of used "INSERT INTO" selected the table and columns then used "VALUES" and inputed the values.
+                                                Finally I used "ORDERED BY" to order the results but rating in ascending order and then title by ascending order.
+                                            </p>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="codingExample-imageAndCaption-container">
+
+                                        <div class="codingExample-image">
+                                            <img src="images/codingExamples/example2/results.jpg" alt="Code from the hex body">
+                                        </div>
+
+                                        <div class="codingExample-Caption">
+                                            <h5>Results</h5>
+                                            <p>
+                                                There is only one result that is rated. The other three are "NULL". If I just wanted rated movies I would have inserted "rev_stars IS NOT NULL" inbetween the first "WHERE" and "M.mov_id" then just added an "AND" to add the sub query.
+                                                If there were more results and I wanted to change the query to find the highest rated movie in its genre. I would of either used a "LIMIT" in the correct order to get
+                                                the highest rated movie in its genre or created another subquery and used the "MAX" aggregate function to select the highest rated movie in its genre.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact">
+                <div class="scroll-up">
+
+                        <span class="up-arrow">
+                            <a href="#"><img src="icons/chevron-up-solid.svg" alt="up arrow"></a>
+                        </span>
+                        <h3> <a href="#">Scroll up </a></h3>
+
+                </div>
+            </section>
+        </div>
+
+        <!-- Javascript -->
+        <script src="js/menuslider/menuslider.js" charset="utf-8"></script>
+        <script src="js/typed.js"></script>
+        <script>
+        var typed = new Typed('.typed', {
+            strings: [
+                "Portfolio Coding Example",
+            ],
+            typeSpeed: 50,
+            showCursor:false,
+        });
+        </script>
+
+    </body>
+</html>
